@@ -1,7 +1,14 @@
 @extends('adminlte::auth.auth-page', ['auth_type' => 'login'])
-
+<style>
+    body {
+background-image: url('vendor/adminlte/dist/img/familia-anas-wayuu.png');
+background-repeat: no-repeat;
+background-size: cover;
+}
+</style>
 @section('adminlte_css_pre')
     <link rel="stylesheet" href="{{ asset('vendor/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+ 
 @stop
 
 @php( $login_url = View::getSection('login_url') ?? config('adminlte.login_url', 'login') )
