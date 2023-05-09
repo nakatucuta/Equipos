@@ -1,11 +1,67 @@
 @extends('adminlte::auth.auth-page', ['auth_type' => 'login'])
 <style>
-    body {
-background-image: url('vendor/adminlte/dist/img/familia-anas-wayuu.png');
-background-repeat: no-repeat;
-background-size: cover;
+    .navbar-brand {
+  color: black;
 }
-</style>
+
+    body {
+      background-image: url('vendor/adminlte/dist/img/familia-anas-wayuu.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: background-image 0.5s ease-in-out;
+    }
+    
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* fondo oscuro con 50% de transparencia */
+      z-index: -1; /* hacer que este pseudo-elemento esté detrás del contenido */
+    }
+    
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-image: url('tu-imagen-de-fondo.png');
+    }
+    
+    .login-page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    .card {
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .card-header {
+      background-color: #fff;
+      border-bottom: none;
+    }
+    
+    .card-body {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .card-footer {
+      background-color: #fff;
+      border-top: none;
+    }
+  </style>
+
+
 @section('adminlte_css_pre')
     <link rel="stylesheet" href="{{ asset('vendor/icheck-bootstrap/icheck-bootstrap.min.css') }}">
  

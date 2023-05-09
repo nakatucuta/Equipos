@@ -16,7 +16,7 @@ return [
     */
 
     'title' => 'Anas Wayuu',
-    'title_prefix' => 'Anas Wayuu',
+    'title_prefix' => '',
     'title_postfix' => '',
     
     /*
@@ -64,8 +64,8 @@ return [
     |
     */
 
-    'logo' => '<b>Anas</b>Wayuu',
-    'logo_img' => 'vendor/adminlte/dist/img/logo.jpg',
+    'logo' => '<span style="color: #ffffff"><b>Anas</b>Wayuu</span>',
+    'logo_img' => 'vendor/adminlte/dist/img/logo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -85,13 +85,13 @@ return [
     */
 
     'auth_logo' => [
-        'enabled' => false,
+        'enabled' => true,
         'img' => [
             'path' => 'vendor/adminlte/dist/img/logo.png',
             'alt' => 'Auth Logo',
-            'class' => '',
-            'width' => 200,
-            'height' => 200,
+            'class' => 'img-circle',
+            'width' => 130,
+            'height' => 130,
         ],
     ],
 
@@ -113,8 +113,8 @@ return [
             'path' => 'vendor/adminlte/dist/img/logo.png',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
-            'width' => 100,
-            'height' => 100,
+            'width' => 250,
+            'height' => 250,
         ],
     ],
 
