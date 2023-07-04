@@ -368,12 +368,12 @@ return [
         
         ['header' => 'labels'],
         [
-            'text'       => 'ALERTAS',
-            'icon_color' => 'red',
-            'url'        => 'alert',
+            'text'       => 'ESTADISTICAS',
+            'icon_color' => 'blue',
+            'url'        => 'grafica-barras',
             'label'       => 'REVISAR',  
-            'label_color' => 'danger',
-            'icon_color'  => 'red'
+            'label_color' => 'primary',
+            'icon_color'  => 'blue'
         ],
         // [
         //     'text'       => 'warning',

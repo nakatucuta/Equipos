@@ -17,8 +17,24 @@ class ItemController extends Controller
      */
     public function index()
     {
+        // Obtener los datos de la base de datos
+        $productos = DB::table('items')
+                        ->select('nombre', DB::raw('SUM(cantidad) as total'))
+                        ->groupBy('nombre')
+                        ->get();
+    
+        // Preparar los datos para la gráfica de barras
+        $categorias = [];
+        $totales = [];
+    
+        foreach ($productos as $producto) {
+            $categorias[] = $producto->nombre;
+            $totales[] = $producto->total;
+        }
+
+        
         $item = Item::select('*')->get();
-        return view('item.index',["item"=>$item]);
+        return view('item.index',compact('categorias', 'totales','item'));
     }
 
     /**
@@ -114,6 +130,33 @@ class ItemController extends Controller
 
 
     }
+
+
+
+
+    public function graficaBarras()
+    {
+        // Obtener los datos de la base de datos
+        $productos = DB::table('items')
+                        ->select('nombre', DB::raw('SUM(cantidad) as total'))
+                        ->groupBy('nombre')
+                        ->get();
+    
+        // Preparar los datos para la gráfica de barras
+        $categorias = [];
+        $totales = [];
+    
+        foreach ($productos as $producto) {
+            $categorias[] = $producto->nombre;
+            $totales[] = $producto->total;
+        }
+    
+        // Pasar los datos a la vista
+        return view('item.grafica-barras', compact('categorias', 'totales'));
+
+    }
+    
+
     
 
 }
