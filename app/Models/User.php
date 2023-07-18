@@ -15,7 +15,7 @@ class User extends Authenticatable
     use HasFactory;
     public function getDateFormat(){
         return 'Y-d-m h:m:s';
-        }
+      }
     /**
      * The attributes that are mass assignable.
      *

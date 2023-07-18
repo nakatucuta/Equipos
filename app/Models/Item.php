@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     use HasFactory;
+    public function getDateFormat(){
+        return 'Y-d-m h:m:s';
+      }
 
     
     public function person()

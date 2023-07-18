@@ -34,13 +34,16 @@ return new class extends Migration
             $table->string('disco_duro')->nullable();
             $table->string('procesador')->nullable();
             $table->string('board')->nullable();
-            $table->string('pantalla')->nullable();
+            
+            $table->integer('peripherals_id');
+            $table->foreign('peripherals_id')->references('id')->on('peripherals')->onDelete('cascade')->onUpdate('cascade');
             $table->string('mouse')->nullable();
             $table->string('teclado')->nullable();
             $table->string('est_actual')->nullable();
             $table->string('descripcion_soft')->nullable();
             $table->integer('people_id');
             $table->foreign('people_id')->references('id')->on('people')->onDelete('cascade')->onUpdate('cascade');
+            
             $table->timestamps();
         });
     }

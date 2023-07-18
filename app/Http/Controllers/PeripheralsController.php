@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\person;
+use App\Models\Peripherals;
 use Illuminate\Http\Request;
 
-class PersonController extends Controller
+class PeripheralsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $person = person::select('*')->get();
-        return view('person.index',["person"=>$person]);
+        $periferico = Peripherals::select('*')->get();
+        return view('peripherals.index',["periferico"=>$periferico]);
     }
 
     /**
@@ -21,7 +21,7 @@ class PersonController extends Controller
      */
     public function create()
     {
-        return view('person.create');
+        return view('peripherals.create');
     }
 
     /**
@@ -31,19 +31,19 @@ class PersonController extends Controller
     {
         $datosEmpleado = request()->except('_token');
         // Establecer manualmente los valores de created_at y updated_at
-        $now = now();
        
+        $now = now();
         $datosEmpleado['created_at'] = $now->format('Y-d-m h:m:s');
         $datosEmpleado['updated_at'] = $now->format('Y-d-m h:m:s');
 
-        person::insert($datosEmpleado);
-        return redirect()->route('person.index');
+        Peripherals::insert($datosEmpleado);
+        return redirect()->route('perifericos.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(person $person)
+    public function show(Peripherals $peripherals)
     {
         //
     }
@@ -51,7 +51,7 @@ class PersonController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(person $person)
+    public function edit(Peripherals $peripherals)
     {
         //
     }
@@ -59,7 +59,7 @@ class PersonController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, person $person)
+    public function update(Request $request, Peripherals $peripherals)
     {
         //
     }
@@ -67,7 +67,7 @@ class PersonController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(person $person)
+    public function destroy(Peripherals $peripherals)
     {
         //
     }

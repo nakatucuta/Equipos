@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use App\Models\person;
+use App\Models\Peripherals;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Exports\ItemExport;
@@ -42,7 +43,8 @@ class ItemController extends Controller
      */
     public function create()
     {   $persona = person::select('*')->get();
-        return view('item.create',["persona"=>$persona]);
+        $periferico = Peripherals::select('*')->get();
+        return view('item.create',["persona"=>$persona,"periferico"=>$periferico]);
     }
 
     /**
@@ -56,9 +58,10 @@ class ItemController extends Controller
         }
     
         // Establecer manualmente los valores de created_at y updated_at
+     
         $now = now();
-        $datosEmpleado['created_at'] = $now;
-        $datosEmpleado['updated_at'] = $now;
+        $datosEmpleado['created_at'] = $now->format('Y-d-m h:m:s');
+        $datosEmpleado['updated_at'] = $now->format('Y-d-m h:m:s');
     
         Item::insert($datosEmpleado);
         return redirect()->route('item.index');

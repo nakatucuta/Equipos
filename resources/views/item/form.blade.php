@@ -14,7 +14,10 @@
             </div>
             
             <div class="card-body">
-
+                <br>
+                <div class="card border-info mb-3" >
+                    <div class="card-header bg-success">EQUIPO</div>
+                    <div class="card-body">
  <div class="form-group">
     <label for="activo">Nombre</label>    
     <input class="form-control" type="text" name="nombre" id='nombre' 
@@ -49,7 +52,8 @@
     <input class="form-control" type="text" name="tag" id='tag' 
     value="{{ isset($empleado->tag)?$empleado->tag:old('tag')}}">
 </div>
-
+</div></div>
+{{-- aqui termina la primera seccion --}}
 <div class="form-group">
     <label for="activo">Descripcion</label>
     <textarea name="descripcion" id="descripcion" value="{{ isset($empleado->descripcion)?$empleado->descripcion:old('descripcion')}}" 
@@ -165,21 +169,38 @@
         <input class="form-control" type="text" name="board" id='board' 
         value="{{ isset($empleado->board)?$empleado->board:old('board')}}">
     </div>
-    <div class="form-group">
-        <label for="activo">Pantalla</label>    
-        <input class="form-control" type="text" name="pantalla" id='pantalla' 
-        value="{{ isset($empleado->pantalla)?$empleado->pantalla:old('pantalla')}}">
+    
+
+    <div class="form-group" >
+        <label for="Nombre">Pantalla</label>
+        <select class="person " name="peripherals_id" id="peripherals_id"  style="width: 100% ">
+        <option  value="0">SELECCIONAR</option>
+        @foreach($periferico as $developer)
+        <option  value="{{$developer->id}}">{{$developer->nombre_periferico}}</option>
+        @endforeach 
+        
+      </select>
     </div>
-    <div class="form-group">
-        <label for="activo">Mouse</label>    
-        <input class="form-control" type="text" name="mouse" id='mouse' 
-        value="{{ isset($empleado->mouse)?$empleado->mouse:old('mouse')}}">
+
+    <div class="form-group" >
+        <label for="Nombre">Mouse</label>
+        <select class="person " name="mouse" id="mouse"  style="width: 100% ">
+        <option  value="0">SELECCIONAR</option>
+        @foreach($periferico as $developer)
+        <option  value="{{$developer->id}}">{{$developer->nombre_periferico}}</option>
+        @endforeach 
+        
+      </select>
     </div>
+    
+    
+
     <div class="form-group">
         <label for="activo">Teclado</label>    
         <input class="form-control" type="text" name="teclado" id='teclado' 
         value="{{ isset($empleado->teclado)?$empleado->teclado:old('teclado')}}">
     </div>
+    
     <div class="form-group">
         <label for="activo">Estado actual fisico</label>    
         <textarea name="est_actual" id="est_actual" 

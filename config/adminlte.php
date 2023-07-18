@@ -346,6 +346,10 @@ return [
                     'url'  => 'item',
                 ],
                 [
+                    'text' => 'Perifericos',
+                    'url'  => 'perifericos',
+                ],
+                [
                     'text' => 'funcionario',
                     'url'  => 'person',
                 ],

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\PeripheralsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('item', ItemController::class)->middleware('auth');
 
 Route::resource('person', PersonController::class)->middleware('auth');
+
+Route::resource('perifericos', PeripheralsController::class)->middleware('auth');
 
 Route::get('/report', [ItemController::class,'resporte'])->name('export');
 
