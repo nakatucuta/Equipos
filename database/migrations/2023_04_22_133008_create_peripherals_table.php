@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('modelo');
             $table->string('activo');
             $table->string('service_tag');
+            $table->integer('Items_id');
+            $table->foreign('Items_id')->references('id')->on('items')->onDelete('cascade')->onUpdate('cascade');
+            
             $table->timestamps();
         });
     }

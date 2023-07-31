@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Item;
 use App\Models\Peripherals;
 use Illuminate\Http\Request;
 
@@ -20,8 +20,8 @@ class PeripheralsController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        return view('peripherals.create');
+    {   $item = Item::select('*')->get();
+        return view('peripherals.create',["item"=>$item]);
     }
 
     /**

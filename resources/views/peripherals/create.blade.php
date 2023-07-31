@@ -29,60 +29,52 @@
 @section('content')
 
 @stop
-
-@section('js')
-<script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('vendor/DataTables/js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('vendor/DataTables/js/dataTables.bootstrap5.min.js') }}"></script>
-
-<style> 
-
-    .dataTables_filter input {
-      width: 350px !important;
-      height: 100%;
-      background-color: #555 ;
-      border: solid 3px !important;
-      border-radius: 20px !important;
-      color: rgb(64, 125, 232);
-      padding: 10px !important;
-      font-weight: bold !important;
-    }
-    
-    .dataTables_filter label {
-      font-weight: bold !important;
-    }
-    
-     .dataTables_length label {
-      
-      font-weight: bold !important;
-    } 
-    
-    .dataTables_length select {
-      display: flex ;
-      border: solid 3px !important;
-      border-radius: 20px !important;
-      align-items: center !important;
-      margin-bottom: 10px !important;
-      color: rgb(64, 125, 232) !important;
-    }
-    
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/select2.css') }}">
+    <style>
+        /* Agrega el estilo CSS para la clase img-pequena */
+        .img-pequena {
+            width: 50px; /* Puedes ajustar el tamaño según tus necesidades */
+            height: 50px;
+        }
     </style>
-    <script>
-        $(document).ready(function () {
-        $('#sivigila').DataTable({
-            "language":{
-                "search": "BUSCAR",
-                "lengthMenu": "Mostrar _MENU_ registros",
-                "info": "Mostrando pagina _PAGE_ de _PAGES_",
-                "paginate": {
-                    "first": "Primero",
-                    "last": "Último",
-                    "next": "Siguiente",
-                    "previous": "Anterior"
-                }
-            },
-            "autoWidth": true
+   @stop
+@section('js')
+<script src="{{ asset('vendor/adminlte/dist/js/select2.min.js') }}"></script>
+
+    <script> 
+   
+        
+        $(document).ready(function() {
+    $('.person').select2();
+        });
+        
+
+       
+        </script>
+
+        
+
+<script>
+     // Inicializa Select2 en el elemento <select>
+        $(document).ready(function() {
+        $('#Items_id').select2({
+            templateResult: formatOption // Llama a la función formatOption para personalizar el contenido de cada opción
         });
     });
-    </script>
+
+    // Función para personalizar el contenido de cada opción
+    function formatOption(option) {
+        if (!option.id) {
+            return option.text; // Si es la opción "SELECCIONAR", muestra el texto normalmente
+        }
+
+        // Para cada desarrollador, crea una opción con la marca y la imagen en miniatura
+        var $option = $(
+            '<span><img class="img-thumbnail img-fluid img-posicionada img-pequena" src="' + option.element.dataset.img + '" alt="" />' + option.text + '</span>'
+        );
+        return $option;
+    }
+</script>
 @stop

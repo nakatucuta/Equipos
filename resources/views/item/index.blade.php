@@ -44,11 +44,11 @@
                 @foreach($item as $items)
                  <tr>
                     <td>{{$items->id}}</td>
-                    <td>{{$items->activo}}</td>
+                    <td>{{$items->est_actual}}</td>
                      <td>{{$items->marca}}</td>
-                    <td>{{$items->tag}}</td>
-                    <td>{{$items->service}}</td>
-                    <td>{{$items->cantidad}}</td>
+                    <td>{{$items->modelo}}</td>
+                    <td>{{$items->activo}}</td>
+                    <td>{{$items->service_tag}}</td>
                      <td>
                     <img class="img-thumbnail img fluid" src="{{ asset('storage').'/'.$items->foto }}" width="50"  alt=""> {{--estamos accediendo a la carpeta donde esta la imagen --}}
                                {{-- {{$empleado->foto}} --}}

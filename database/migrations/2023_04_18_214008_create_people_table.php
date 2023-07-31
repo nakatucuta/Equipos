@@ -15,7 +15,11 @@ return new class extends Migration
             $table->increments('id');
             $table->string('nombres');
             $table->string('cargo');
+            $table->string('correo');
             $table->string('direccion');
+
+            
+            
             $table->timestamps();
         });
     }

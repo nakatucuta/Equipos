@@ -4,6 +4,14 @@
     value="{{ isset($empleado->nombres)?$empleado->nombres:old('nombres')}}">
 </div>
 
+<div class="form-group">
+  <label for="correo">Correo</label>    
+  <input class="form-control" type="email" name="correo" id="correo" 
+         value="{{ isset($empleado->correo) ? $empleado->correo : old('correo') }}" 
+         autocomplete="email" required placeholder="ejemplo@ejemplo.com">
+</div>
+
+
 
 <div class="form-group">
   <label for="activo">Cargo</label>    

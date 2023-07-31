@@ -18,20 +18,21 @@ class ItemController extends Controller
      */
     public function index()
     {
-        // Obtener los datos de la base de datos
-        $productos = DB::table('items')
-                        ->select('nombre', DB::raw('SUM(cantidad) as total'))
-                        ->groupBy('nombre')
-                        ->get();
-    
-        // Preparar los datos para la gráfica de barras
-        $categorias = [];
-        $totales = [];
-    
+      // Obtener los datos de la base de datos
+      $productos = DB::table('items')
+      ->select('marca', DB::raw('COUNT(id) as total'))
+      ->groupBy('marca')
+      ->get();
+
+    // Preparar los datos para la gráfica de barras
+    $categorias = [];
+    $totales = [];
+
         foreach ($productos as $producto) {
-            $categorias[] = $producto->nombre;
-            $totales[] = $producto->total;
+        $categorias[] = $producto->marca;
+        $totales[] = $producto->total;
         }
+
 
         
         $item = Item::select('*')->get();
@@ -62,7 +63,7 @@ class ItemController extends Controller
         $now = now();
         $datosEmpleado['created_at'] = $now->format('Y-d-m h:m:s');
         $datosEmpleado['updated_at'] = $now->format('Y-d-m h:m:s');
-    
+        
         Item::insert($datosEmpleado);
         return redirect()->route('item.index');
     }
@@ -141,8 +142,8 @@ class ItemController extends Controller
     {
         // Obtener los datos de la base de datos
         $productos = DB::table('items')
-                        ->select('nombre', DB::raw('SUM(cantidad) as total'))
-                        ->groupBy('nombre')
+                        ->select('marca', DB::raw('COUNT(id) as total'))
+                        ->groupBy('marca')
                         ->get();
     
         // Preparar los datos para la gráfica de barras
@@ -150,7 +151,7 @@ class ItemController extends Controller
         $totales = [];
     
         foreach ($productos as $producto) {
-            $categorias[] = $producto->nombre;
+            $categorias[] = $producto->marca;
             $totales[] = $producto->total;
         }
     
