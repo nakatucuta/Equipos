@@ -73,13 +73,41 @@
         
 
         $(document).ready(function(){
-             $('#copia_seguridad').on('change', function() {
+             $('#tipo_item').on('change', function() {
                  if ( this.value == 'SI')
-                 $("#input_oculto").show();
+                 $("#inputsuperoculto").show();
                  else
-                 $("#input_oculto").hide();
+                 $("#inputsuperoculto").hide();
              });
             
+                });
+
+
+                $(document).ready(function() {
+                $('#tipo_item').on('change', function() {
+                    if ($(this).val() == 'CELULAR') {
+                       
+                        $('#inputsuperoculto').hide();
+                        $('#inputsuperoculto1').hide();
+                        $('#inputsuperoculto2').hide();
+                        $('#inputsuperoculto3').hide();
+                    
+                    }   if ($(this).val() == 'TABLET') {
+                       
+                       $('#inputsuperoculto').hide();
+                       $('#inputsuperoculto1').hide();
+                       $('#inputsuperoculto2').hide();
+                       $('#inputsuperoculto3').hide();
+                   
+                   }  if ($(this).val() == 'COMPUTADOR') {
+                       
+                       $('#inputsuperoculto').show();
+                       $('#inputsuperoculto1').show();
+                       $('#inputsuperoculto2').show();
+                       $('#inputsuperoculto3').show();
+                   
+                   }
+                });
                 });
         </script>
 

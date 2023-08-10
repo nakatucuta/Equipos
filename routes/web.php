@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\AssignmentsController;
 use App\Http\Controllers\PeripheralsController;
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,8 @@ Route::resource('person', PersonController::class)->middleware('auth');
 Route::resource('perifericos', PeripheralsController::class)->middleware('auth');
 
 Route::get('/report', [ItemController::class,'resporte'])->name('export');
+
+Route::resource('assignments', AssignmentsController::class)->middleware('auth');
 
 // ruta para ver un item
 

@@ -122,10 +122,10 @@ class ItemController extends Controller
     {   
         $item = Item::findOrFail($id);
 
-        $person_name = DB::table('people')
-        ->select(DB::raw("people.nombres"))
+        $person_name = DB::table('items')
+        ->select(DB::raw("items.est_actual"))
        
-        ->join('items', 'people.id', '=', 'items.people_id')
+        
         ->where('items.id', $id)
         ->first();
  

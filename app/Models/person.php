@@ -16,4 +16,9 @@ class person extends Model
     {
         return $this->hasMany('App\Models\Item');
     }
+
+    public function assignments()
+    {
+        return $this->belongsToMany('App\Models\Assignment');
+    }
 }

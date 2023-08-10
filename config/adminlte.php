@@ -346,8 +346,8 @@ return [
                     'url'  => 'item',
                 ],
                 [
-                    'text' => 'Perifericos',
-                    'url'  => 'perifericos',
+                    'text' => 'Asignaciones',
+                    'url'  => 'assignments',
                 ],
                 [
                     'text' => 'funcionario',

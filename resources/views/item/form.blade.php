@@ -1,7 +1,28 @@
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="Nombre">SELECCIONE QUE ITEM DESEA AGREGAR</label>
+        <select class="person2 " name="tipo_item" id="tipo_item"  style="width: 100% ">
+        <option  value="">SELECCIONAR</option>
+        
+        <option  value="COMPUTADOR">COMPUTADOR</option>
+        <option  value="CELULAR">CELULAR</option>
+        <option  value="TABLET">TABLET</option>  
+       
+        
+      </select>
+    </div>
+</div>
 
-<div class="row">
+    
+<div class="row" >
 <div class="col-lg-4">
 
+
+    {{-- <div  >
+    debe desaparecerJHJJJJJJJJJJJJJJJJJJJJJJJJJ
+   
+   
+    </div> --}}
  <div class="card card-info card-outline card-tabs">
             <div class="card-header">
                 <h2 class="card-title text-center">
@@ -19,7 +40,7 @@
                     <div class="card-header bg-success">EQUIPO</div>
                     <div class="card-body">
  <div class="form-group">
-    <label for="activo">Estado Actual</label>    
+    <label for="activo">Nombre del equipo</label>    
     <input class="form-control" type="text" name="est_actual" id='est_actual' 
     value="{{ isset($empleado->est_actual)?$empleado->est_actual:old('est_actual')}}">
 </div>
@@ -63,10 +84,9 @@
 {{-- aqui termina la primera seccion --}}
 
 
-
 {{-- AQUI INICIA LA SECION DE LA RAM --}}
-<div class="card border-info mb-3" >
-    <div class="card-header bg-success">Memoria ram</div>
+<div class="card border-info mb-3" id="inputsuperoculto2">
+    <div class="card-header bg-success" >Memoria ram</div>
     <div class="card-body">
 
 <div class="form-group">
@@ -91,7 +111,7 @@
 </div>
 
 {{-- AQUI INICIA DISCO DURO --}}
-<div class="card border-info mb-3" >
+<div class="card border-info mb-3" id="inputsuperoculto3" >
     <div class="card-header bg-success">Disco Duro</div>
     <div class="card-body">
         <div class="form-group">
@@ -138,14 +158,14 @@
         </div>
         
         {{-- aqui inicia detalles --}}
-        <div class="card-body">
+        <div class="card-body" id="inputsuperoculto">
 
             <div class="card border-info mb-3" >
                 <div class="card-header bg-success">DETALLES</div>
                 <div class="card-body">
 
                     <div class="form-group">
-                        <label for="activo">Ip</label>    
+                        <label for="activo">Sistema Operativo</label>    
                         <input class="form-control" type="text" name="sistema_operativo" id='sistema_operativo' 
                         value="{{ isset($empleado->sistema_operativo)?$empleado->sistema_operativo:old('sistema_operativo')}}">
                     </div>
@@ -236,7 +256,7 @@
                  
         
     
-        <div class="card-body">
+        <div class="card-body" id="inputsuperoculto1" >
 
 
 
@@ -269,26 +289,7 @@
         {{-- aqui termina  --}}
 
        
-        {{-- AQUI COMIENZA RESPONSABLE --}}
-
-        <div class="card border-info mb-3" >
-            <div class="card-header bg-success">RESPONSABLE</div>
-            <div class="card-body">
-
-                <div class="form-group" >
-                    <label for="Nombre">RESPONSABLE</label>
-                    <select class="person " name="people_id" id="people_id"  style="width: 100% ">
-                    <option  value="0">SELECCIONAR</option>
-                    @foreach($persona as $developer)
-                    <option  value="{{$developer->id}}">{{$developer->nombres}}</option>
-                    @endforeach 
-                    
-                  </select>
-                </div>
-
-    </div>   </div>
-
-        {{-- AQUI TERMINA --}}
+       
 
         <div class="card border-info mb-3" >
             <div class="card-header bg-success">BOARD</div>
@@ -301,28 +302,58 @@
                 </div>
 
 
-                <div class="form-group">
-                    <label for="Nombre">Foto</label>
-                    @if( isset($empleado->foto))
-                    <img src="{{ asset('storage').'/'.$empleado->foto }}" width="50" alt="">
-                    @endif
-                    {{-- {{$empleado->foto}} para mostrar ruta de foto --}}
-                    <input class="form-control" type="file" name="foto" value="" id="foto" >
-                    <br>
-                </div>
+
 
             </div>
         </div>
 
-        {{-- AQUI COMIENZA PERIFERICOS --}}
-
-       
-
-        {{-- AQUI TERMINA PERIFERICOS --}}
+      
 </div>
 </div>
+
+ {{-- AQUI COMIENZA RESPONSABLE --}}
+
+ <div class="card border-info mb-3" >
+    <div class="card-header bg-success">RESPONSABLE</div>
+    <div class="card-body">
+
+        {{-- <div class="form-group" >
+            <label for="Nombre">RESPONSABLE</label>
+            <select class="person " name="people_id" id="people_id"  style="width: 100% ">
+            <option  value="0">SELECCIONAR</option>
+            @foreach($persona as $developer)
+            <option  value="{{$developer->id}}">{{$developer->nombres}}</option>
+            @endforeach 
+            
+          </select>
+        </div> --}}
+
+</div>   </div>
+
+{{-- AQUI TERMINA --}}
+
+
+  {{-- AQUI COMIENZA PERIFERICOS --}}
+
+  <div class="card border-info mb-3" >
+    <div class="card-header bg-success">FOTO</div>
+    <div class="card-body">
+        <div class="form-group">
+            <label for="Nombre">Foto</label>
+            @if( isset($empleado->foto))
+            <img src="{{ asset('storage').'/'.$empleado->foto }}" width="50" alt="">
+            @endif
+            {{-- {{$empleado->foto}} para mostrar ruta de foto --}}
+            <input class="form-control" type="file" name="foto" value="" id="foto" >
+            <br>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+{{-- AQUI TERMINA PERIFERICOS --}}
 
 
 <input class="btn btn-success" type="submit" value="enviar">
 <a  class="btn btn-primary" href="{{url('item')}}"  class="btn  btn-success"> REGRESAR</a>
-

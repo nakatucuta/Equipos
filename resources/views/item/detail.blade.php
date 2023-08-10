@@ -20,7 +20,7 @@
                         
                         <img class="img-thumbnail img-fluid img-posicionada" src="{{ asset('storage').'/'.$item->foto }}" alt="">
                        
-                        <h4>Responsable: {{ $person_name->nombres }}</h4>
+                        <h4>Responsable: {{ $person_name->est_actual }}</h4>
                         <p> <strong> Descrpcion:</strong> {{ $item->descripcion }}</p>  
                         <p><strong>Activo:</strong> {{ $item->activo }}</p>
                         <p><strong>Marca: </strong>{{ $item->marca }}</p>

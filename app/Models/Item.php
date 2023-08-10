@@ -17,6 +17,11 @@ class Item extends Model
     {
         return $this->belongsTo('App\Models\Person');
     }
+
+    public function assignments()
+    {
+        return $this->belongsToMany('App\Models\Assignment');
+    }
 }
 
 
