@@ -2,74 +2,52 @@
 
 namespace App\Exports;
 
-use App\Models\Item;
+use App\Models\assignments;
+use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Concerns\FromCollection;
-
 use Maatwebsite\Excel\Concerns\WithHeadings;
-
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithEvents;
 use Maatwebsite\Excel\Events\AfterSheet;
 
-class ItemExport implements FromCollection, WithHeadings, ShouldAutoSize, WithEvents
+class AsignarExport implements FromCollection, WithHeadings, ShouldAutoSize, WithEvents
 {
     /**
     * @return \Illuminate\Support\Collection
     */
     public function collection()
     {
-        return Item::all();
+    
+        return  $item = DB::table('assignments as a')
+        ->join('people as b', 'a.people_id', '=', 'b.id')
+        ->join('items as c', 'a.item_id', '=', 'c.id')
+        ->select('a.id', 'b.nombres', 'b.cargo', 'c.tipo_item', 'c.service_tag','c.foto'
+        ,'c.marca','b.direccion')
+        ->get();
     }
+
 
     public function headings(): array
     {
         return [
-            'ID',
+            'id',
             'Nombre',
-            'Tipo',
-            'Fecha De Compra',
+            'Cargo',
+            'Tipo de item',
+            'Service tag',
+            'Foto',
             'Marca',
-            'Modelo',
-            'Activo',
-            'Service Tag',
-            'Procesador',
-            'Tipo equipo',
-            'Memoria ram',
-            'Capacidad ram',
-            'Cantidad ram',
-            'Capacidad Disco duro',
-            'Tecnologia disco duro',
-            'Cantidad disco duro',
-            'Sistema operativo',
-            'Nombre aw',
-            'Ip',
-            'Mac',
-            'Fecha de mantenimiento',
-            'Oficce',
-            'Tipo',
-            'Correo Ofice',
-            'Antivirus',
-            'Acceso Remoto',
-            'Copia de seguridad',
-            'Nombre de la carpeta',
-            'Correo copia de seguridad',
-            'Board',
-            'Ubicacion de la  foto',
-            'Cantidad',
-            'Fecha de creacion del dato',
-            'Fecha de actualizacion del dato',
-           
+            'Direccion a la que pertenece'
          
         ];
     
     }
-
-
+    
     public function registerEvents(): array
     {
         return [
             AfterSheet::class    => function(AfterSheet $event) {
-                $cellRange = 'A1:AH1'; // All headers
+                $cellRange = 'A1:H1'; // All headers
                 $event->sheet->getDelegate()->getStyle($cellRange)->getFont()->setSize(14);
                 $event->sheet->getDelegate()->getStyle($cellRange)->getFont()->setBold(true);
                 $event->sheet->getDelegate()->getStyle($cellRange)->getFill()

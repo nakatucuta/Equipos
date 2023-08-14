@@ -80,6 +80,18 @@
         class="form-control" rows="5" maxlength="600"></textarea>
 </div>
 
+<div class="form-group">
+    <label for="precio">Precio </label>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+        </div>
+        <input type="number" class="form-control" name="precio" id="precio" 
+            value="{{ isset($empleado->precio) ? $empleado->precio : old('precio') }}" step="0.01" required>
+    </div>
+</div>
+
+
 </div></div>
 {{-- aqui termina la primera seccion --}}
 

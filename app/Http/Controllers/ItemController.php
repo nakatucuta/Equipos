@@ -63,7 +63,7 @@ class ItemController extends Controller
         $now = now();
         $datosEmpleado['created_at'] = $now->format('Y-d-m h:m:s');
         $datosEmpleado['updated_at'] = $now->format('Y-d-m h:m:s');
-        
+        $datosEmpleado['cantidad'] = 1;
         Item::insert($datosEmpleado);
         return redirect()->route('item.index');
     }

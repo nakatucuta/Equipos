@@ -30,7 +30,12 @@ Route::resource('person', PersonController::class)->middleware('auth');
 
 Route::resource('perifericos', PeripheralsController::class)->middleware('auth');
 
+
+//rutas de reporte en excel
+Route::get('/report1', [AssignmentsController::class,'reporteasignacion'])->name('asigna1');
 Route::get('/report', [ItemController::class,'resporte'])->name('export');
+//aqui termina
+
 
 Route::resource('assignments', AssignmentsController::class)->middleware('auth');
 

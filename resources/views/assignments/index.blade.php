@@ -17,7 +17,7 @@
 
     <a href="{{route('assignments.create')}}" title="DETALLE" class="btn  btn-primary btn-sm">
     <span class="icon-zoom-in" ></span> NUEVO ASIGNACION</a>
-    <a href="{{route('export')}}" class="btn  btn-success btn-sm" style="
+    <a href="{{route('asigna1')}}" class="btn  btn-success btn-sm" style="
     float: right:;
     margin-right: 0;
     
@@ -28,11 +28,11 @@
      <thead class="table table-hover table-info table-bordered " style="background-color: #d9f2e6 ;border: 1px solid #000000;">
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Activo</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Cargo</th>
+            <th scope="col">Tipo Item</th>
+            <th scope="col">Service Tag</th>
             <th scope="col">Marca</th>
-            <th scope="col">Tag</th>
-            <th scope="col">Service</th>
-            <th scope="col">Cantidad</th>
             <th scope="col">Imagen</th>
             <th scope="col">Acciones</th>
 
@@ -44,7 +44,11 @@
                 @foreach($item as $items)
                  <tr>
                     <td>{{$items->id}}</td>
-                 
+                    <td>{{$items->nombres}}</td>
+                    <td>{{$items->cargo}}</td>
+                    <td>{{$items->tipo_item}}</td>
+                    <td>{{$items->service_tag}}</td>
+                    <td>{{$items->marca}}</td>
                      <td>
                     <img class="img-thumbnail img fluid" src="{{ asset('storage').'/'.$items->foto }}" width="50"  alt=""> {{--estamos accediendo a la carpeta donde esta la imagen --}}
                                {{-- {{$empleado->foto}} --}}

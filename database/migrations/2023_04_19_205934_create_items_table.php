@@ -16,11 +16,12 @@ return new class extends Migration
             $table->string('est_actual')->nullable();
             $table->string('tipo_item')->nullable();  
             $table->date('fecha_compra')->nullable();
-            $table->integer('marca')->nullable();
+            $table->string('marca')->nullable();
             $table->string('modelo')->nullable();
             $table->string('activo')->unique();
             $table->string('service_tag')->unique();
             $table->string('procesador')->nullable();
+            $table->bigInteger('precio')->nullable();
             $table->string('tipo_equipo')->nullable();
 
             //MEMORIA RAM
@@ -61,7 +62,8 @@ return new class extends Migration
             $table->string('board')->nullable();
             $table->string('foto')->nullable();
           
-            
+            //PARA LA CANTIDAD
+            $table->integer('cantidad')->nullable();
       
             
             $table->timestamps();

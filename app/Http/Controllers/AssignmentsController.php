@@ -6,6 +6,9 @@ use App\Models\assignments;
 use Illuminate\Http\Request;
 use App\Models\person;
 use App\Models\Item;
+use App\Exports\AsignarExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\DB;
 
 
 class AssignmentsController extends Controller
@@ -15,7 +18,12 @@ class AssignmentsController extends Controller
      */
     public function index()
     {
-        $item = assignments::select('*')->get();
+        $item = DB::table('assignments as a')
+        ->join('people as b', 'a.people_id', '=', 'b.id')
+        ->join('items as c', 'a.item_id', '=', 'c.id')
+        ->select('a.id', 'b.nombres', 'b.cargo', 'c.tipo_item', 'c.service_tag','c.foto'
+        ,'c.marca')
+        ->get();
         return view('assignments.index',compact('item'));
     }
 
@@ -92,5 +100,12 @@ class AssignmentsController extends Controller
     public function destroy(assignments $assignments)
     {
         //
+    }
+
+    public function reporteasignacion()
+    {   
+        return Excel::download(new AsignarExport, 'asignaciones.xls');
+
+
     }
 }
