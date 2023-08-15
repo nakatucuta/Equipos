@@ -141,7 +141,7 @@ class ItemController extends Controller
         $item = Item::findOrFail($id);
 
         $person_name = DB::table('items')
-        ->select(DB::raw("items.est_actual"))
+        ->select('*')
        
         
         ->where('items.id', $id)
