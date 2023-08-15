@@ -53,6 +53,24 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
+
+        $campos= [
+            'est_actual' => 'required',
+            'tipo_item' => 'required',
+            'fecha_compra' => 'required',
+            'marca' => 'required',
+            'modelo' => 'required',
+            'activo' => 'required',
+            'service_tag' => 'required',
+            
+        ];
+
+        $mensajes=[
+            'required'=>'El :attribute es requerido',      
+        ];
+
+        $this->validate($request, $campos, $mensajes);
+
         $datosEmpleado = request()->except('_token');
         if($request->hasfile('foto')){  
             $datosEmpleado ['foto'] = $request->file('foto')->store('uploads','public');

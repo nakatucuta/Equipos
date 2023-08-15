@@ -29,6 +29,20 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
+        $campos= [
+            'nombres' => 'required',
+            'cargo' => 'required',
+            'correo' => 'required',
+            'direccion' => 'required',
+            
+            
+        ];
+
+        $mensajes=[
+            'required'=>'El :attribute es requerido',      
+        ];
+
+        $this->validate($request, $campos, $mensajes);
         $datosEmpleado = request()->except('_token');
         // Establecer manualmente los valores de created_at y updated_at
         $now = now();

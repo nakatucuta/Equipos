@@ -8,7 +8,7 @@
       
     </h1>
 
-
+    @include('assignments.mensajes')
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 @stop

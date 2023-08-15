@@ -1,3 +1,5 @@
+
+@include('item.mensajes')
 <div class="col-sm-4">
     <div class="form-group">
         <label for="Nombre">SELECCIONE QUE ITEM DESEA AGREGAR</label>

@@ -9,7 +9,7 @@ use App\Models\Item;
 use App\Exports\AsignarExport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Redirect;
 
 class AssignmentsController extends Controller
 {
@@ -42,6 +42,21 @@ class AssignmentsController extends Controller
      */
     public function store(Request $request)
     {
+
+        $campos= [
+            'people_id' => 'required',
+            'item_id' => 'required',
+            
+        
+        ];
+
+        $mensajes=[
+            'required'=>'El :attribute es requerido',      
+        ];
+
+        $this->validate($request, $campos, $mensajes);
+
+
         $datosEmpleado = request()->except('_token');
         $now = now();
         $datosEmpleado['created_at'] = $now->format('Y-d-m h:m:s');
@@ -67,7 +82,8 @@ class AssignmentsController extends Controller
  
 
 
-        return redirect()->route('assignments.create');
+        return redirect()->route('assignments.index') 
+        ->with('mensaje',' La asignacion fue guardado Exitosamente..!');
     }
 
     /**

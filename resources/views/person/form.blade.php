@@ -1,3 +1,5 @@
+@include('person.mensajes')
+
 <div class="form-group">
     <label for="activo">Nombre Completo</label>    
     <input class="form-control" type="text" name="nombres" id='nombres' 
