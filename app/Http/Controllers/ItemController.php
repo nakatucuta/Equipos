@@ -55,7 +55,7 @@ class ItemController extends Controller
     {
 
         $campos= [
-            'est_actual' => 'required',
+            // 'est_actual' => 'required',
             'tipo_item' => 'required',
             'fecha_compra' => 'required',
             'marca' => 'required',

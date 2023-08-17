@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('est_actual')->nullable();
+            // $table->string('est_actual')->nullable();
             $table->string('tipo_item')->nullable();  
             $table->date('fecha_compra')->nullable();
             $table->string('marca')->nullable();
@@ -59,7 +59,7 @@ return new class extends Migration
             
             
             // LOS NUEVOS
-            $table->string('board')->nullable();
+            // $table->string('board')->nullable();
             $table->string('foto')->nullable();
           
             //PARA LA CANTIDAD

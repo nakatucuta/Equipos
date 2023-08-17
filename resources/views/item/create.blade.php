@@ -58,6 +58,9 @@
   color: #fff; /* Cambiar el color del texto del icono "x" */
 }
 
+
+
+
 </style>
 @section('js')
 <script src="{{ asset('vendor/adminlte/dist/js/select2.min.js') }}"></script>
@@ -91,6 +94,7 @@
                         $('#inputsuperoculto1').hide();
                         $('#inputsuperoculto2').hide();
                         $('#inputsuperoculto3').hide();
+                        $('#inputsuperoculto5').hide();
                     
                     }   if ($(this).val() == 'TABLET') {
                        
@@ -98,14 +102,22 @@
                        $('#inputsuperoculto1').hide();
                        $('#inputsuperoculto2').hide();
                        $('#inputsuperoculto3').hide();
+                       $('#inputsuperoculto5').hide();
                    
-                   }  if ($(this).val() == 'COMPUTADOR') {
+                   }  if ($(this).val() == 'CPU') {
                        
                        $('#inputsuperoculto').show();
                        $('#inputsuperoculto1').show();
                        $('#inputsuperoculto2').show();
                        $('#inputsuperoculto3').show();
                    
+                   } else {
+
+                        $('#inputsuperoculto').hide();
+                        $('#inputsuperoculto1').hide();
+                        $('#inputsuperoculto2').hide();
+                        $('#inputsuperoculto3').hide();
+                        $('#inputsuperoculto5').hide();
                    }
                 });
                 });

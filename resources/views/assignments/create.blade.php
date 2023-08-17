@@ -32,6 +32,13 @@
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/select2.css') }}">
+    <style>
+          /* Agrega el estilo CSS para la clase img-pequena */
+  .img-pequena {
+            width: 50px; /* Puedes ajustar el tamaño según tus necesidades */
+            height: 50px;
+        }
+    </style>
    @stop
 @section('js')
 <script src="{{ asset('vendor/adminlte/dist/js/select2.min.js') }}"></script>

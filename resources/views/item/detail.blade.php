@@ -15,7 +15,11 @@
             <p class="card-text">
             <br>
             <div class="row"> 
-                <div class="col-sm-6">
+           
+                <div class="col-sm-3">
+                    <img class="img-thumbnail img fluid img-posicionada" src="{{ asset('storage').'/'.$item->foto }}" width="200"  alt="">
+                </div>
+                <div class="col-sm-3">
                     <h2>ITEM: {{ $person_name->tipo_item }}</h2>
                     <p><strong>Sistema operativo: </strong>{{ $item->sistema_operativo }}</p>
                     <p><strong>Nombre Aw: </strong>{{ $item->nombre_aw }}</p>
@@ -36,7 +40,6 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         
-                        <img class="img-thumbnail img-fluid img-posicionada" src="{{ asset('storage').'/'.$item->foto }}" alt="">
                        
                         
                         <p> <strong> Nombre del equipo:</strong> {{ $item->est_actual }}</p>  

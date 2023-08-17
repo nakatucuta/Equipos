@@ -6,11 +6,16 @@
         <select class="person2 " name="tipo_item" id="tipo_item"  style="width: 100% ">
         <option  value="">SELECCIONAR</option>
         
-        <option  value="COMPUTADOR">COMPUTADOR</option>
+        <option  value="CPU">CPU</option>
         <option  value="CELULAR">CELULAR</option>
-        <option  value="TABLET">TABLET</option>  
-       
-        
+        <option  value="TABLET">TABLET</option>
+        <option  value="IMPRESORA">IMPRESORA</option>    
+        <option  value="MOUSE">MOUSE</option>  
+        <option  value="TECLADO">TECLADO</option>
+        <option  value="BATERIA">BATERIA</option> 
+        <option  value="PANTALLA">TABLET</option>
+        <option  value="TELEFONO">TELEFONO</option>  
+        <option  value="SCANER">SCANER</option>       
       </select>
     </div>
 </div>
@@ -41,11 +46,11 @@
                 <div class="card border-info mb-3" >
                     <div class="card-header bg-success">EQUIPO</div>
                     <div class="card-body">
- <div class="form-group">
+ {{-- <div class="form-group">
     <label for="activo">Nombre del equipo</label>    
     <input class="form-control" type="text" name="est_actual" id='est_actual' 
     value="{{ isset($empleado->est_actual)?$empleado->est_actual:old('est_actual')}}">
-</div>
+</div> --}}
 <div class="form-group">
     <label for="activo">Fecha de compra</label>    
     <input class="form-control" type="date" name="fecha_compra" id='fecha_compra' 
@@ -76,7 +81,7 @@
     value="{{ isset($empleado->service_tag)?$empleado->service_tag:old('service_tag')}}">
 </div>
 
-<div class="form-group">
+<div class="form-group" id="inputsuperoculto5">
     <label for="activo">Procesador</label>
     <textarea name="procesador" id="procesador" value="{{ isset($empleado->procesador)?$empleado->procesador:old('procesador')}}" 
         class="form-control" rows="5" maxlength="600"></textarea>
@@ -304,7 +309,7 @@
 
        
        
-
+{{-- 
         <div class="card border-info mb-3" >
             <div class="card-header bg-success">BOARD</div>
             <div class="card-body">
@@ -319,7 +324,7 @@
 
 
             </div>
-        </div>
+        </div> --}}
 
       
 </div>
@@ -327,9 +332,9 @@
 
  {{-- AQUI COMIENZA RESPONSABLE --}}
 
- <div class="card border-info mb-3" >
+ {{-- <div class="card border-info mb-3" >
     <div class="card-header bg-success">RESPONSABLE</div>
-    <div class="card-body">
+    <div class="card-body"> --}}
 
         {{-- <div class="form-group" >
             <label for="Nombre">RESPONSABLE</label>
@@ -342,7 +347,7 @@
           </select>
         </div> --}}
 
-</div>   </div>
+{{-- </div>   </div> --}}
 
 {{-- AQUI TERMINA --}}
 
