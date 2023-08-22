@@ -198,6 +198,18 @@ class ItemController extends Controller
     }
     
 
-    
+    public function darbaja($id)
+    {
+        $item = Item::findOrFail($id); // Obtén el item por su ID
+
+        // Aquí puedes realizar las acciones necesarias, como cambiar el estado del item
+        if ($item->estado !== 0) {
+            $item->estado = 0;
+            $item->save();
+        }
+
+        // Puedes redirigir a una página o hacer cualquier otra acción después de dar de baja
+        return redirect()->back()->with('success', 'Item dado de baja exitosamente.');
+    }
 
 }

@@ -56,3 +56,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/grafica-barras', [ItemController::class, 'graficaBarras'])->name('grafica.barras');
+
+//ruta para dar de baja
+Route::get('/baja/{id}', [ItemController::class, 'darbaja'])->name('baja1');

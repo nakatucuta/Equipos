@@ -48,7 +48,7 @@
                      <td>{{$items->marca}}</td>
                     <td>{{$items->modelo}}</td>
                     <td>{{$items->activo}}</td>
-                    <td>{{$items->precio}}</td>
+                    <td>{{$items->estado}}</td>
                      <td>
                     <img class="img-thumbnail img fluid" src="{{ asset('storage').'/'.$items->foto }}" width="50"  alt=""> {{--estamos accediendo a la carpeta donde esta la imagen --}}
                                {{-- {{$empleado->foto}} --}}
@@ -62,12 +62,35 @@
                         </form>
 
                          <a class="btn btn-primary btn-sm" href="{{route('detalleseguimiento', $items->id)}}" class="ref">
-                                <i class="far fa-eye"></i>
+                                <i class="far fa-eye fa-spin  fa-fw"></i>
                         </a>
 
                         <a class="btn  btn-warning" href="{{url('/item/'.$items->id. '/edit')}}" class="ref" >
-                            EDITAR 
+                            <i class="fa fa-cog fa-spin  fa-fw"></i>
                         </a>
+
+                        @if ($items->estado === '0')
+                        <button class="btn btn-secondary btn-sm" style="cursor: not-allowed;">
+                            <i class="fas fa-toggle-on" style="color: gray;"></i>
+                        </button>
+                    @else
+                        <a href="{{ route('baja1', $items->id) }}"
+                           onclick="event.preventDefault();
+                                    if (confirm('¿Está seguro de que desea dar de baja a este item?')) {
+                                        document.getElementById('delete-form-{{ $items->id }}').submit();
+                                    }"
+                           class="btn btn-danger btn-sm">
+                            <i class="fas fa-toggle-on"></i>
+                        </a>
+                    @endif
+                    <form id="delete-form-{{ $items->id }}" action="{{ route('baja1', $items->id) }}" method="GET" style="display: none;">
+                        @csrf
+                    </form>              
+                         
+                         
+                         
+                        
+                    
                         </td>
                         @endforeach
                     </tr>   
