@@ -13,13 +13,11 @@ return new class extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('cedula');
             $table->string('nombres');
             $table->string('cargo');
             $table->string('correo');
             $table->string('direccion');
-
-            
-            
             $table->timestamps();
         });
     }

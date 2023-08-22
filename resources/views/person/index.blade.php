@@ -26,6 +26,7 @@
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Nombre Completo</th>
+            <th scope="col"> Cedula</th>
             <th scope="col">Cargo</th>
             <th scope="col">Direccion</th>
            
@@ -39,6 +40,7 @@
                  <tr>
                     <td>{{$items->id}}</td>
                     <td>{{$items->nombres}}</td>
+                    <td>{{$items->cedula}}</td>
                      <td>{{$items->cargo}}</td>
                     <td>{{$items->direccion}}</td>
                    

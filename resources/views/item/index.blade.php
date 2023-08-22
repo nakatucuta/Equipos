@@ -32,7 +32,7 @@
             <th scope="col">Marca</th>
             <th scope="col">Tag</th>
             <th scope="col">Service</th>
-            <th scope="col">Cantidad</th>
+            <th scope="col">Precio</th>
             <th scope="col">Imagen</th>
             <th scope="col">Acciones</th>
 
@@ -48,7 +48,7 @@
                      <td>{{$items->marca}}</td>
                     <td>{{$items->modelo}}</td>
                     <td>{{$items->activo}}</td>
-                    <td>{{$items->service_tag}}</td>
+                    <td>{{$items->precio}}</td>
                      <td>
                     <img class="img-thumbnail img fluid" src="{{ asset('storage').'/'.$items->foto }}" width="50"  alt=""> {{--estamos accediendo a la carpeta donde esta la imagen --}}
                                {{-- {{$empleado->foto}} --}}
@@ -63,6 +63,10 @@
 
                          <a class="btn btn-primary btn-sm" href="{{route('detalleseguimiento', $items->id)}}" class="ref">
                                 <i class="far fa-eye"></i>
+                        </a>
+
+                        <a class="btn  btn-warning" href="{{url('/item/'.$items->id. '/edit')}}" class="ref" >
+                            EDITAR 
                         </a>
                         </td>
                         @endforeach

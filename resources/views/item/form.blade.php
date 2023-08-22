@@ -55,6 +55,7 @@
     <label for="activo">Fecha de compra</label>    
     <input class="form-control" type="date" name="fecha_compra" id='fecha_compra' 
     value="{{ isset($empleado->fecha_compra)?$empleado->fecha_compra:old('fecha_compra')}}">
+
 </div>
 
 <div class="form-group">

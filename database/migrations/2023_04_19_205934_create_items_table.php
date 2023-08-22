@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('estado')->nullable();  
             // $table->string('est_actual')->nullable();
             $table->string('tipo_item')->nullable();  
             $table->date('fecha_compra')->nullable();

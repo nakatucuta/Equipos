@@ -6,6 +6,13 @@
     value="{{ isset($empleado->nombres)?$empleado->nombres:old('nombres')}}">
 </div>
 
+
+<div class="form-group">
+  <label for="activo">Cedula</label>    
+  <input class="form-control" type="text" name="cedula" id='cedula' 
+  value="{{ isset($empleado->cedula)?$empleado->cedula:old('cedula')}}">
+</div>
+
 <div class="form-group">
   <label for="correo">Correo</label>    
   <input class="form-control" type="email" name="correo" id="correo" 

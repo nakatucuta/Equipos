@@ -82,6 +82,7 @@ class ItemController extends Controller
         $datosEmpleado['created_at'] = $now->format('Y-d-m h:m:s');
         $datosEmpleado['updated_at'] = $now->format('Y-d-m h:m:s');
         $datosEmpleado['cantidad'] = 1;
+        $datosEmpleado['estado'] = 1;
         Item::insert($datosEmpleado);
         return redirect()->route('item.index');
     }
@@ -97,17 +98,35 @@ class ItemController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Item $item)
+    public function edit( $id )
     {
-        //
+        $empleado = Item::findOrFail($id); //bucars la info a travez del id se alamcena
+        return view('item.edit', compact('empleado'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Item $item)
+    public function update(Request $request,$id)
     {
-        //
+
+       
+        $datosEmpleado = request()->except(['_token','_method']); //recp datos en variable excetp token y method
+
+        if($request->hasfile('foto')){ 
+            //esta condicion pregunta si exite un archivo entra en el if
+           //uploasd es la carpeta especialmente creada para cargar archivos  storage/upload
+           $empleado = Item::findOrFail($id); //recuperando info de empleado
+           Storage::delete('public/'.$empleado->foto);//hagase borrado usando este enlace
+           $datosEmpleado ['foto'] = $request->file('foto')->store('uploads','public');
+   
+                   } //ojo para este update que es el de la foto debes agregar esta libreria use Illuminate\Support\Facades\Storage;
+                   
+        Item::where('id', '=', $id)->update($datosEmpleado);
+         return redirect()->route('item.index')->with('mensaje', 'item modificado con exito'); //MOSTRAR MENSAJE
+
+      
+
     }
 
     /**

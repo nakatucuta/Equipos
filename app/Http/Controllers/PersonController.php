@@ -31,6 +31,7 @@ class PersonController extends Controller
     {
         $campos= [
             'nombres' => 'required',
+            'cedula' => 'required',
             'cargo' => 'required',
             'correo' => 'required',
             'direccion' => 'required',
