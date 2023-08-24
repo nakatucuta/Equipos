@@ -28,10 +28,10 @@
      <thead class="table table-hover table-info table-bordered " style="background-color: #d9f2e6 ;border: 1px solid #000000;">
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Activo</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Service tag</th>
+            <th scope="col">Modelo</th>
             <th scope="col">Marca</th>
-            <th scope="col">Tag</th>
-            <th scope="col">Service</th>
             <th scope="col">Precio</th>
             <th scope="col">Imagen</th>
             <th scope="col">Acciones</th>
@@ -44,11 +44,11 @@
                 @foreach($item as $items)
                  <tr>
                     <td>{{$items->id}}</td>
-                    <td>{{$items->est_actual}}</td>
-                     <td>{{$items->marca}}</td>
+                    <td>{{$items->tipo_item}}</td>
+                     <td>{{$items->service_tag}}</td>
                     <td>{{$items->modelo}}</td>
-                    <td>{{$items->activo}}</td>
-                    <td>{{$items->estado}}</td>
+                    <td>{{$items->marca}}</td>
+                    <td>{{$items->precio}}</td>
                      <td>
                     <img class="img-thumbnail img fluid" src="{{ asset('storage').'/'.$items->foto }}" width="50"  alt=""> {{--estamos accediendo a la carpeta donde esta la imagen --}}
                                {{-- {{$empleado->foto}} --}}
