@@ -5,7 +5,7 @@
         <label for="Nombre">SELECCIONE QUE ITEM DESEA AGREGAR</label>
         <select class="person2 " name="tipo_item" id="tipo_item"  style="width: 100% ">
         <option  value="">SELECCIONAR</option>
-        
+        <option  value="PANTALLA">PANTALLA</option>
         <option  value="CPU">CPU</option>
         <option  value="CELULAR">CELULAR</option>
         <option  value="TABLET">TABLET</option>
