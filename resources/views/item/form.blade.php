@@ -110,9 +110,14 @@
     <div class="card-body">
 
 <div class="form-group">
-    <label for="activo">Marca</label>    
-    <input class="form-control" type="text" name="memoriaram" id='memoriaram' 
-    value="{{ isset($empleado->memoriaram)?$empleado->memoriaram:old('memoriaram')}}">
+    <label for="activo">Descripcion</label>
+    
+    <textarea name="memoriaram" id="memoriaram" value="{{ isset($empleado->memoriaram)?$empleado->memoriaram:old('memoriaram')}}" 
+        class="form-control" rows="5" maxlength="600"></textarea>
+    
+
+    {{-- <input class="form-control" type="text" name="memoriaram" id='memoriaram' 
+    value="{{ isset($empleado->memoriaram)?$empleado->memoriaram:old('memoriaram')}}"> --}}
 </div>
 
 
@@ -141,8 +146,18 @@
         </div>
         <div class="form-group">
             <label for="activo">Tecnologia</label>    
-            <input class="form-control" type="text" name="tegnologia" id='tegnologia' 
-            value="{{ isset($empleado->tegnologia)?$empleado->tegnologia:old('tegnologia')}}">
+                {{-- <input class="form-control" type="text" name="tegnologia" id='tegnologia' 
+                value="{{ isset($empleado->tegnologia)?$empleado->tegnologia:old('tegnologia')}}"> --}}
+            
+            <select class="person4" name="tegnologia" id="tegnologia"  style="width: 100% ">
+                <option  value="">SELECCIONAR</option>
+                
+                <option  value="SOLIDO">SOLIDO</option>
+                <option  value="MECANICO">MECANICO</option>
+               
+              </select>
+        
+        
         </div>
         <div class="form-group">
             <label for="activo">Cantidad</label>    
@@ -288,8 +303,16 @@
 
                     <div class="form-group">
                         <label for="activo">copia_seguridad</label>    
-                        <input class="form-control" type="text" name="copia_seguridad" id='copia_seguridad' 
-                        value="{{ isset($empleado->copia_seguridad)?$empleado->copia_seguridad:old('copia_seguridad')}}">
+                        
+                        
+                        <select class="person3" name="copia_seguridad" id="copia_seguridad"  style="width: 100% ">
+                            <option  value="">SELECCIONAR</option>
+                            
+                            <option  value="SI">SI</option>
+                            <option  value="NO">NO</option>
+                           
+                          </select>
+                    
                     </div>
 
                     <div class="form-group">

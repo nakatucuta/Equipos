@@ -45,7 +45,7 @@
                  <tr>
                     <td>{{$items->id}}</td>
                     <td>{{$items->tipo_item}}</td>
-                     <td>{{$items->service_tag}}</td>
+                    <td>{{$items->service_tag}}</td>
                     <td>{{$items->modelo}}</td>
                     <td>{{$items->marca}}</td>
                     <td>{{$items->precio}}</td>

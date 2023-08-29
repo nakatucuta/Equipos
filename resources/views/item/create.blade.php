@@ -66,6 +66,15 @@
 <script src="{{ asset('vendor/adminlte/dist/js/select2.min.js') }}"></script>
 
     <script> 
+
+$(document).ready(function() {
+    $('.person4').select2();
+        });
+
+    $(document).ready(function() {
+    $('.person3').select2();
+        });
+
          $(document).ready(function() {
     $('.person2').select2();
         });
