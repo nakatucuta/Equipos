@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('service_tag')->unique();
             $table->string('procesador')->nullable();
             $table->bigInteger('precio')->nullable();
-            $table->string('tipo_equipo')->nullable();
+            // $table->string('tipo_equipo')->nullable();
 
             //MEMORIA RAM
             $table->string('memoriaram')->nullable();
