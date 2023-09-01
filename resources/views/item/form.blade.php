@@ -13,7 +13,7 @@
         <option  value="MOUSE">MOUSE</option>  
         <option  value="TECLADO">TECLADO</option>
         <option  value="BATERIA">BATERIA</option> 
-        <option  value="PANTALLA">TABLET</option>
+        
         <option  value="TELEFONO">TELEFONO</option>  
         <option  value="SCANER">SCANER</option>       
       </select>
