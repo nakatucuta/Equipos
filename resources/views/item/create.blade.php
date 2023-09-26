@@ -127,6 +127,14 @@ $(document).ready(function() {
                         $('#inputsuperoculto2').hide();
                         $('#inputsuperoculto3').hide();
                         $('#inputsuperoculto5').hide();
+
+                   } if($(this).val() == 'PORTATIL'){
+                      
+                        $('#inputsuperoculto').show();
+                       $('#inputsuperoculto1').show();
+                       $('#inputsuperoculto2').show();
+                       $('#inputsuperoculto3').show();
+
                    }
                 });
                 });

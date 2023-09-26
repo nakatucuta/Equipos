@@ -19,8 +19,8 @@ return new class extends Migration
             $table->date('fecha_compra')->nullable();
             $table->string('marca')->nullable();
             $table->string('modelo')->nullable();
-            $table->string('activo')->unique();
-            $table->string('service_tag')->unique();
+            $table->string('activo')->nullable();
+            $table->string('service_tag')->nullable();
             $table->string('procesador')->nullable();
             $table->bigInteger('precio')->nullable();
             // $table->string('tipo_equipo')->nullable();

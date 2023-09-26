@@ -59,9 +59,9 @@ class ItemController extends Controller
             'tipo_item' => 'required',
             'fecha_compra' => 'required',
             'marca' => 'required',
-            'modelo' => 'required',
-            'activo' => 'required',
-            'service_tag' => 'required',
+            // 'modelo' => 'required',
+            // 'activo' => 'required',
+            // 'service_tag' => 'required',
             
         ];
 
