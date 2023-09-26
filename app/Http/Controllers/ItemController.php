@@ -83,6 +83,7 @@ class ItemController extends Controller
         $datosEmpleado['updated_at'] = $now->format('Y-d-m h:m:s');
         $datosEmpleado['cantidad'] = 1;
         $datosEmpleado['estado'] = 1;
+        $datosEmpleado['user_id'] = auth()->user()->id;
         Item::insert($datosEmpleado);
         return redirect()->route('item.index');
     }

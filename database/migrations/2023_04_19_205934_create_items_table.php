@@ -65,7 +65,9 @@ return new class extends Migration
           
             //PARA LA CANTIDAD
             $table->integer('cantidad')->nullable();
-      
+            //USUARIOS QUE HICIERON X COSA 
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             
             $table->timestamps();
         });
