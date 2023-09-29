@@ -33,7 +33,13 @@ class AssignmentsController extends Controller
     public function create()
     {   
         $persona = person::select('*')->get();
-        $item = Item::select('*')->get();
+        $item = DB::table('items')
+        ->whereNotExists(function ($query) {
+            $query->select(DB::raw(1))
+                ->from('assignments')
+                ->whereRaw('assignments.item_id = items.id');
+        })
+        ->get();
         return view('assignments.create',compact('persona','item'));
     }
 
