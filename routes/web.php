@@ -43,6 +43,8 @@ Route::resource('assignments', AssignmentsController::class)->middleware('auth')
 
 Route::get('/Item/{id}/detail', 'App\Http\Controllers\ItemController@detail')->name('detalleseguimiento');
 
+Route::get('/asignacion/{id}/detail', 'App\Http\Controllers\AssignmentsController@detail')->name('detalleasignacion');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -124,4 +124,20 @@ class AssignmentsController extends Controller
 
 
     }
+
+
+    public function detail($id)
+    {   
+        $item = DB::table('assignments as a')
+        ->join('people as b', 'a.people_id', '=', 'b.id')
+        ->join('items as c', 'a.item_id', '=', 'c.id')
+        ->select('a.id', 'b.nombres', 'b.cargo', 'c.tipo_item', 'c.service_tag','c.foto'
+        ,'c.marca')
+        ->first();
+ 
+
+        return view('assignments.detail',["item"=>$item]);
+
+
+    }
 }

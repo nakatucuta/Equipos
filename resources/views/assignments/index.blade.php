@@ -61,7 +61,7 @@
                                 <button type="submit" onclick="return confirm('¿Quieres borrar?')" class="btn btn-danger  btn-sm"><i class="fas fa-trash"></i></button>
                         </form>
 
-                         <a class="btn btn-primary btn-sm" href="{{route('detalleseguimiento', $items->id)}}" class="ref">
+                         <a class="btn btn-primary btn-sm" href="{{route('detalleasignacion', $items->id)}}" class="ref">
                                 <i class="far fa-eye"></i>
                         </a>
                         </td>
