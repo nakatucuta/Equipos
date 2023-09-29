@@ -16,15 +16,16 @@
                 <img class="img-thumbnail img-fluid" src="{{ asset('storage').'/'.$item->foto }}" alt="">
             </div>
             <div class="col-md-4">
-                {{-- <h2>ITEM: {{ $person_name->tipo_item }}</h2> --}}
+                <h2>ITEM: {{ $item->tipo_item }}</h2>
                 
                 
-                <p><strong>Nombre del equipo:</strong> {{ $itemq->id }}</p>
-                 <p><strong>Fecha de compra:</strong> {{ $item->nombres }}</p>
-                <p><strong>Marca: </strong>{{ $item->cargo }}</p>
-                <p><strong>Modelo: </strong>{{ $item->tipo_item }}</p>
-                <p><strong>ServiceTAG:</strong {{ $item->service_tag }}></p>
-                <p><strong>Procesador:</strong> {{ $item->marca }}</p>
+                <p><strong>ID:</strong> {{ $item->id }}</p>
+                <p><strong>SERVICETAG:</strong>{{ $item->service_tag }}</p>
+                 <p><strong>FUNCIONARIO:</strong> {{ $item->nombres }}</p>
+                <p><strong>CARGO: </strong>{{ $item->cargo }}</p>
+                <p><strong>ITEM: </strong>{{ $item->tipo_item }}</p>
+                
+                <p><strong>MARCA:</strong> {{ $item->marca }}</p>
                 {{--<p><strong>Precio:</strong> {{ $item->precio }}</p> --}}
                 {{-- <p><strong>Foto:</strong> {{ $item->foto }} </p>   --}}
                 {{-- <p><strong>Tipo de equipo:</strong> {{ $item->tipo_equipo }}</p>
