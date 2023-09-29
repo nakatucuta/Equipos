@@ -128,16 +128,15 @@ class AssignmentsController extends Controller
 
     public function detail($id)
     {   
-        $item = DB::table('assignments as a')
-        ->join('people as b', 'a.people_id', '=', 'b.id')
-        ->join('items as c', 'a.item_id', '=', 'c.id')
-        ->select('a.id', 'b.nombres', 'b.cargo', 'c.tipo_item', 'c.service_tag','c.foto'
-        ,'c.marca')
-        ->first();
- 
-
-        return view('assignments.detail',["item"=>$item]);
-
-
+        $assignment = assignments::findOrFail($id); // Usar el modelo Assignment en lugar de DB::table
+    
+        $item = assignments::join('people as b', 'assignments.people_id', '=', 'b.id')
+            ->join('items as c', 'assignments.item_id', '=', 'c.id')
+            ->select('assignments.id', 'b.nombres', 'b.cargo', 'c.tipo_item', 'c.service_tag', 'c.foto', 'c.marca')
+            ->where('assignments.id', $id)
+            ->first();
+    
+        return view('assignments.detail', ["item" => $item, "itemq" => $assignment]);
     }
+    
 }

@@ -19,7 +19,7 @@
                 {{-- <h2>ITEM: {{ $person_name->tipo_item }}</h2> --}}
                 
                 
-                <p><strong>Nombre del equipo:</strong> {{ $item->id }}</p>
+                <p><strong>Nombre del equipo:</strong> {{ $itemq->id }}</p>
                  <p><strong>Fecha de compra:</strong> {{ $item->nombres }}</p>
                 <p><strong>Marca: </strong>{{ $item->cargo }}</p>
                 <p><strong>Modelo: </strong>{{ $item->tipo_item }}</p>
