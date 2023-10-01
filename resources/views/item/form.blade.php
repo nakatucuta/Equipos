@@ -3,23 +3,29 @@
 <div class="col-sm-4">
     <div class="form-group">
         <label for="Nombre">SELECCIONE QUE ITEM DESEA AGREGAR</label>
-        <select class="person2 " name="tipo_item" id="tipo_item"  style="width: 100% ">
-        <option  value="">SELECCIONAR</option>
-        <option  value="PANTALLA">PANTALLA</option>
-        <option  value="CPU">CPU</option>
-        <option  value="CELULAR">CELULAR</option>
-        <option  value="TABLET">TABLET</option>
-        <option  value="IMPRESORA">IMPRESORA</option>    
-        <option  value="MOUSE">MOUSE</option>  
-        <option  value="TECLADO">TECLADO</option>
-        <option  value="BATERIA">BATERIA</option> 
-        <option  value="PORTATIL">PORTATIL</option>
-        <option  value="PARLANTE">PARLANTE</option>
-        <option  value="TELEFONO">TELEFONO</option>  
-        <option  value="SCANER">SCANER</option>       
-      </select>
+        <select class="person2" name="tipo_item" id="tipo_item" style="width: 100%" required>
+            <option  value="">SELECCIONAR</option>
+            <option value="PANTALLA">PANTALLA</option>
+            <option value="CPU">CPU</option>
+            <option value="CELULAR">CELULAR</option>
+            <option value="TABLET">TABLET</option>
+            <option value="IMPRESORA">IMPRESORA</option>    
+            <option value="MOUSE">MOUSE</option>  
+            <option value="TECLADO">TECLADO</option>
+            <option value="BATERIA">BATERIA</option> 
+            <option value="PORTATIL">PORTATIL</option>
+            <option value="PARLANTE">PARLANTE</option>
+            <option value="TELEFONO">TELEFONO</option>  
+            <option value="SCANER">SCANER</option>       
+        </select>
     </div>
 </div>
+
+
+
+
+
+
 
     
 <div class="row" >
