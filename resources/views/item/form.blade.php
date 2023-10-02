@@ -62,14 +62,37 @@
     <label for="activo">Fecha de compra</label>    
     <input class="form-control" type="date" name="fecha_compra" id='fecha_compra' 
     value="{{ isset($empleado->fecha_compra)?$empleado->fecha_compra:old('fecha_compra')}}">
-
 </div>
 
+
 <div class="form-group">
+    <label for="Nombre">MARCA</label>
+    <select class="person5" name="marca" id="marca" style="width: 100%" required>
+        <option  value="">SELECCIONAR</option>
+        <option value="Dell">Dell</option>
+        <option value="Acer">Acer</option>
+        <option value="Vaio">Grandstream</option> 
+        <option value="Alienware">Alienware</option>
+        <option value="Apple">Apple</option>
+        <option value="Asus">Asus</option>    
+        <option value="Gateway">Gateway</option>  
+        <option value="HP">HP</option>
+        <option value="LG">LG</option> 
+        <option value="MSI">MSI</option>
+        <option value="Omen by HP">Omen by HP</option>
+        <option value="Samsung">Samsung</option>  
+        <option value="Sony">Sony</option>
+        <option value="Toshiba">Toshiba</option>
+        <option value="Vaio">Vaio</option>       
+    </select>
+</div>
+
+
+{{-- <div class="form-group">
     <label for="activo">Marca</label>    
     <input class="form-control" type="text" name="marca" id='marca' 
     value="{{ isset($empleado->marca)?$empleado->marca:old('marca')}}">
-</div>
+</div> --}}
 
 <div class="form-group">
     <label for="activo">Modelo</label>    
@@ -206,11 +229,29 @@
                 <div class="card-header bg-success">DETALLES</div>
                 <div class="card-body">
 
-                    <div class="form-group">
+                    <label for="Nombre">Sistema Operativo</label>
+    <select class="person6" name="sistema_operativo" id="sistema_operativo" style="width: 100%" required>
+        <option  value="">SELECCIONAR</option>
+        <option value="Windows ">Microsoft Windows</option>
+        <option value="Linux ">Linux</option>
+        <option value="Chrome OS">macOS</option>
+        <option value="Chrome OS">Chrome OS</option> 
+        <option value="FreeBSD ">FreeBSD </option>
+        <option value="ReactOS">ReactOS</option>
+        <option value="Solaris">Solaris</option>    
+        <option value="Ubuntu">Ubuntu</option>  
+        <option value="Android ">Android </option>
+        <option value="iOS ">iOS </option> 
+        <option value="KaiOS ">KaiOS </option>
+    
+    </select>
+
+
+                    {{-- <div class="form-group">
                         <label for="activo">Sistema Operativo</label>    
                         <input class="form-control" type="text" name="sistema_operativo" id='sistema_operativo' 
                         value="{{ isset($empleado->sistema_operativo)?$empleado->sistema_operativo:old('sistema_operativo')}}">
-                    </div>
+                    </div> --}}
 
                     <div class="form-group">
                         <label for="activo">nombre_aw</label>    
@@ -321,10 +362,10 @@
                           </select>
                     
                     </div>
-
+                    <div id='inputsuperoculto_copiseg'>
                     <div class="form-group">
                         <label for="activo">nombre_carpeta</label>    
-                        <input class="form-control" type="text" name="nombre_carpeta" id='nombre_carpeta' 
+                        <input class="form-control" type="text" name="nombre_carpeta" id="nombre_carpeta" 
                         value="{{ isset($empleado->nombre_carpeta)?$empleado->nombre_carpeta:old('nombre_carpeta')}}">
                     </div>
 
@@ -333,7 +374,7 @@
                         <input class="form-control" type="text" name="correo_copiaseg" id='correo_copiaseg' 
                         value="{{ isset($empleado->correo_copiaseg)?$empleado->correo_copiaseg:old('correo_copiaseg')}}">
                     </div>
-
+                </div>
                 </div>
             </div>
         {{-- aqui termina  --}}

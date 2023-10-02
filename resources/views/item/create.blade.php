@@ -68,6 +68,15 @@
     <script> 
 
 $(document).ready(function() {
+    
+  $(document).ready(function() {
+    $('.person6').select2();
+        });
+
+  $(document).ready(function() {
+    $('.person5').select2();
+        });
+
     $('.person4').select2();
         });
 
@@ -78,7 +87,7 @@ $(document).ready(function() {
          $(document).ready(function() {
     $('.person2').select2();
         });
-        
+
         $(document).ready(function() {
     $('.person').select2();
         });
@@ -93,6 +102,19 @@ $(document).ready(function() {
              });
             
                 });
+
+
+                $(document).ready(function(){
+             $('#copia_seguridad').on('change', function() {
+                 if ( this.value == 'SI')
+                 $("#inputsuperoculto_copiseg").show();
+                
+                 else
+                 $("#inputsuperoculto_copiseg").hide();
+             });
+            
+                });
+
 
 
                 $(document).ready(function() {
