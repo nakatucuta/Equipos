@@ -53,7 +53,7 @@
                     <img class="img-thumbnail img fluid" src="{{ asset('storage').'/'.$items->foto }}" width="50"  alt=""> {{--estamos accediendo a la carpeta donde esta la imagen --}}
                                {{-- {{$empleado->foto}} --}}
                            
-                    </td>
+                    </td> 
                     <td>
                         <form action="{{ url('/item/'.$items->id)}}" class="d-inline" method="post">
                                 @csrf
