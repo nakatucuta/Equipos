@@ -230,7 +230,7 @@
                 <div class="card-body">
 
                     <label for="Nombre">Sistema Operativo</label>
-    <select class="person6" name="sistema_operativo" id="sistema_operativo" style="width: 100%" required>
+    <select class="person6" name="sistema_operativo" id="sistema_operativo" style="width: 100%" >
         <option  value="">SELECCIONAR</option>
         <option value="Windows ">Microsoft Windows</option>
         <option value="Linux ">Linux</option>
