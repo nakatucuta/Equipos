@@ -83,7 +83,8 @@
         <option value="Samsung">Samsung</option>  
         <option value="Sony">Sony</option>
         <option value="Toshiba">Toshiba</option>
-        <option value="Vaio">Vaio</option>       
+        <option value="Vaio">Vaio</option>
+        <option value="CDP">CDP</option>        
     </select>
 </div>
 
