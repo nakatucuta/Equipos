@@ -84,7 +84,8 @@
         <option value="Sony">Sony</option>
         <option value="Toshiba">Toshiba</option>
         <option value="Vaio">Vaio</option>
-        <option value="CDP">CDP</option>        
+        <option value="CDP">CDP</option> 
+        <option value="APC">APC</option>        
     </select>
 </div>
 
