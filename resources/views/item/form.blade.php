@@ -85,7 +85,8 @@
         <option value="Toshiba">Toshiba</option>
         <option value="Vaio">Vaio</option>
         <option value="CDP">CDP</option> 
-        <option value="APC">APC</option>        
+        <option value="APC">APC</option>
+        <option value="Genius">Genius</option>        
     </select>
 </div>
 
