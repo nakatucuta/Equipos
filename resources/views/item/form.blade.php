@@ -87,7 +87,8 @@
         <option value="CDP">CDP</option> 
         <option value="APC">APC</option>
         <option value="Genius">Genius</option> 
-        <option value="fujitsu">fujitsu</option>        
+        <option value="fujitsu">fujitsu</option>
+        <option value="Redmi">Redmi</option>         
     </select>
 </div>
 
