@@ -88,7 +88,8 @@
         <option value="APC">APC</option>
         <option value="Genius">Genius</option> 
         <option value="fujitsu">fujitsu</option>
-        <option value="Redmi">Redmi</option>         
+        <option value="Redmi">Redmi</option>  
+        <option value="Kyocera">Kyocera</option>         
     </select>
 </div>
 
