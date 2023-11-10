@@ -92,7 +92,8 @@
         <option value="Kyocera">Kyocera</option>   
         <option value="Tsc">Tsc</option>
         <option value="Logitech">Logitech</option>
-        <option value="Scanzen">Scanzen</option>            
+        <option value="Scanzen">Scanzen</option>
+        <option value="Avision">Avision</option>              
     </select>
 </div>
 
