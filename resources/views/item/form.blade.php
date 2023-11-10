@@ -91,7 +91,8 @@
         <option value="Redmi">Redmi</option>  
         <option value="Kyocera">Kyocera</option>   
         <option value="Tsc">Tsc</option>
-        <option value="Logitech">Logitech</option>              
+        <option value="Logitech">Logitech</option>
+        <option value="Scanzen">Scanzen</option>            
     </select>
 </div>
 
