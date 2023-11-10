@@ -90,7 +90,8 @@
         <option value="fujitsu">fujitsu</option>
         <option value="Redmi">Redmi</option>  
         <option value="Kyocera">Kyocera</option>   
-        <option value="Tsc">Tsc</option>         
+        <option value="Tsc">Tsc</option>
+        <option value="Logitech">Logitech</option>              
     </select>
 </div>
 

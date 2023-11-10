@@ -55,7 +55,7 @@
                            
                     </td> 
                     <td>
-                        <form action="{{ url('/item/'.$items->id)}}" class="d-inline" method="post">
+                        <form action="{{ url('/assignments/'.$items->id)}}" class="d-inline" method="post">
                                 @csrf
                                 {{ method_field('DELETE') }}
                                 <button type="submit" onclick="return confirm('¿Quieres borrar?')" class="btn btn-danger  btn-sm"><i class="fas fa-trash"></i></button>
