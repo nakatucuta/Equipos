@@ -93,7 +93,10 @@
         <option value="Tsc">Tsc</option>
         <option value="Logitech">Logitech</option>
         <option value="Scanzen">Scanzen</option>
-        <option value="Avision">Avision</option>              
+        <option value="Avision">Avision</option>
+        <option value="Epson">Epson</option>
+        <option value="Powest">Powest</option>
+        <option value="Sat">Sat</option>                  
     </select>
 </div>
 
