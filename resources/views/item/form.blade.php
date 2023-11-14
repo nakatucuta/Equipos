@@ -16,7 +16,8 @@
             <option value="PORTATIL">PORTATIL</option>
             <option value="PARLANTE">PARLANTE</option>
             <option value="TELEFONO">TELEFONO</option>  
-            <option value="SCANER">SCANER</option>       
+            <option value="SCANER">SCANER</option> 
+            <option value="PISTOLA LASER">PISTOLA LASER</option>        
         </select>
     </div>
 </div>
