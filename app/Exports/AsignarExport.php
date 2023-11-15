@@ -21,7 +21,7 @@ class AsignarExport implements FromCollection, WithHeadings, ShouldAutoSize, Wit
         return  $item = DB::table('assignments as a')
         ->join('people as b', 'a.people_id', '=', 'b.id')
         ->join('items as c', 'a.item_id', '=', 'c.id')
-        ->select('a.id', 'b.nombres', 'b.cargo', 'c.tipo_item', 'c.service_tag','c.foto'
+        ->select('a.id', 'b.nombres', 'b.cargo', 'c.tipo_item', 'C.marca','c.modelo','c.service_tag','c.foto'
         ,'c.marca','b.direccion')
         ->get();
     }
@@ -34,6 +34,8 @@ class AsignarExport implements FromCollection, WithHeadings, ShouldAutoSize, Wit
             'Nombre',
             'Cargo',
             'Tipo de item',
+            'Marca',
+            'Modelo',
             'Service tag',
             'Foto',
             'Marca',
