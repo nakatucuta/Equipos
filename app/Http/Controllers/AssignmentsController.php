@@ -119,9 +119,9 @@ class AssignmentsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(assignments $id)
+    public function destroy(assignments $assignment)
     {
-        assignments::destroy($id);
+        $assignment->delete();
         // Session::flash('error','El registro se ha agregado correctamente');
         return redirect('assignments')->with('error', 'Empleado borrado con exito');
     }
