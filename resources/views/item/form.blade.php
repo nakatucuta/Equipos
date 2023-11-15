@@ -97,7 +97,9 @@
         <option value="Avision">Avision</option>
         <option value="Epson">Epson</option>
         <option value="Powest">Powest</option>
-        <option value="Sat">Sat</option>                  
+        <option value="Sat">Sat</option>   
+        <option value="Ultraline">Ultraline</option> 
+        <option value="Startec">Startec</option>                  
     </select>
 </div>
 
