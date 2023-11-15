@@ -25,8 +25,9 @@ class ItemExport implements FromCollection, WithHeadings, ShouldAutoSize, WithEv
     {
         return [
             'ID',
-            'Nombre',
-            'Tipo',
+            'Estado',
+          
+            'Tipo_item',
             'Fecha De Compra',
             'Marca',
             'Modelo',

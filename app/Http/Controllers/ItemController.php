@@ -59,6 +59,8 @@ class ItemController extends Controller
             'tipo_item' => 'required',
             'fecha_compra' => 'required',
             'marca' => 'required',
+            'service_tag' => 'required|unique:items,service_tag',
+
             // 'modelo' => 'required',
             // 'activo' => 'required',
             // 'service_tag' => 'required',
@@ -135,6 +137,8 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
+
+        
         $empleado = Item::findOrFail($id);
         if(Storage::delete('public/'.$empleado->foto)){
             Item::destroy($id);

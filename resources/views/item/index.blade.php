@@ -55,11 +55,22 @@
                            
                     </td> 
                     <td>
-                        <form action="{{ url('/assignments/'.$items->id)}}" class="d-inline" method="post">
-                                @csrf
-                                {{ method_field('DELETE') }}
-                                <button type="submit" onclick="return confirm('¿Quieres borrar?')" class="btn btn-danger  btn-sm"><i class="fas fa-trash"></i></button>
-                        </form>
+
+                        <a href="{{route('item.destroy', $items->id)}}"
+                            onclick="event.preventDefault();
+                            if(confirm('¿Está seguro de que desea eliminar el  item?')) {
+                            document.getElementById('delete-form-{{$items->id}}').submit();
+                            }" class="btn  btn-danger btn-sm">
+                            <i class="fas fa-trash"></i>
+                          </a> 
+
+                          <form id="delete-form-{{$items->id}}" action="{{route('item.destroy', $items->id)}}"
+                            method="POST" style="display: none;">
+                            @method('DELETE')
+                            @csrf
+                            </form>
+
+                      
 
                          <a class="btn btn-primary btn-sm" href="{{route('detalleseguimiento', $items->id)}}" class="ref">
                                 <i class="far fa-eye fa-spin  fa-fw"></i>
