@@ -72,7 +72,7 @@
         <option  value="">SELECCIONAR</option>
         <option value="Dell">Dell</option>
         <option value="Acer">Acer</option>
-        <option value="Vaio">Grandstream</option> 
+        <option value="Grandstream">Grandstream</option> 
         <option value="Alienware">Alienware</option>
         <option value="Apple">Apple</option>
         <option value="Asus">Asus</option>    
