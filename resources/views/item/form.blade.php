@@ -16,7 +16,12 @@
             <option value="PORTATIL">PORTATIL</option>
             <option value="PARLANTE">PARLANTE</option>
             <option value="TELEFONO">TELEFONO</option>  
-            <option value="SCANER">SCANER</option> 
+            <option value="SCANER">SCANER</option>
+            <option value="CAMARA">CAMARA</option> 
+            <option value="DIADEMA">DIADEMA</option> 
+            <option value="PLANTA DE SONIDO">PLANTA DE SONIDO</option>
+            <option value="VIDEOBEAM">VIDEOBEAM</option>
+            <option value="DRONE">DRONE</option>
             <option value="PISTOLA LASER">PISTOLA LASER</option>        
         </select>
     </div>
@@ -99,7 +104,9 @@
         <option value="Powest">Powest</option>
         <option value="Sat">Sat</option>   
         <option value="Ultraline">Ultraline</option> 
-        <option value="Startec">Startec</option>                  
+        <option value="Startec">Startec</option> 
+        <option value="Yuansheng">Yuansheng</option>  
+        <option value="Dji">Dji</option>                  
     </select>
 </div>
 
