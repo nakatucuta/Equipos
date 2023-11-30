@@ -107,7 +107,8 @@
         <option value="Startec">Startec</option> 
         <option value="Yuansheng">Yuansheng</option>
         <option value="Xiaomi">Xiaomi</option>  
-        <option value="Dji">Dji</option>                  
+        <option value="Dji">Dji</option> 
+        <option value="Motorola">Motorola</option>                  
     </select>
 </div>
 
