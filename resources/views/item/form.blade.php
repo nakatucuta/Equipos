@@ -105,7 +105,8 @@
         <option value="Sat">Sat</option>   
         <option value="Ultraline">Ultraline</option> 
         <option value="Startec">Startec</option> 
-        <option value="Yuansheng">Yuansheng</option>  
+        <option value="Yuansheng">Yuansheng</option>
+        <option value="Xiaomi">Xiaomi</option>  
         <option value="Dji">Dji</option>                  
     </select>
 </div>
