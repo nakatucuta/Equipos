@@ -19,6 +19,7 @@
             <option value="SCANER">SCANER</option>
             <option value="CAMARA">CAMARA</option> 
             <option value="DIADEMA">DIADEMA</option> 
+            <option value="DIGITURNO">DIGITURNO</option> 
             <option value="PLANTA DE SONIDO">PLANTA DE SONIDO</option>
             <option value="VIDEOBEAM">VIDEOBEAM</option>
             <option value="DRONE">DRONE</option>
@@ -108,7 +109,8 @@
         <option value="Yuansheng">Yuansheng</option>
         <option value="Xiaomi">Xiaomi</option>  
         <option value="Dji">Dji</option> 
-        <option value="Motorola">Motorola</option>                  
+        <option value="Motorola">Motorola</option>
+        <option value="Digitalpos">Digitalpos</option>                  
     </select>
 </div>
 
