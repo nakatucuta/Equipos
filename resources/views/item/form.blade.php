@@ -110,7 +110,8 @@
         <option value="Xiaomi">Xiaomi</option>  
         <option value="Dji">Dji</option> 
         <option value="Motorola">Motorola</option>
-        <option value="Digitalpos">Digitalpos</option>                  
+        <option value="Digitalpos">Digitalpos</option> 
+        <option value="Wattana">Wattana</option>                    
     </select>
 </div>
 
