@@ -33,7 +33,7 @@
             <th scope="col">Tipo Item</th>
             <th scope="col">Service Tag</th>
             <th scope="col">Marca</th>
-            <th scope="col">Imagen</th>
+            {{-- <th scope="col">Imagen</th> --}}
             <th scope="col">Acciones</th>
 
            
@@ -49,11 +49,11 @@
                     <td>{{$items->tipo_item}}</td>
                     <td>{{$items->service_tag}}</td>
                     <td>{{$items->marca}}</td>
-                     <td>
-                    <img class="img-thumbnail img fluid" src="{{ asset('storage').'/'.$items->foto }}" width="50"  alt=""> {{--estamos accediendo a la carpeta donde esta la imagen --}}
-                               {{-- {{$empleado->foto}} --}}
+                     {{-- <td>
+                    <img class="img-thumbnail img fluid" src="{{ asset('storage').'/'.$items->foto }}" width="50"  alt=""> {{--estamos accediendo a la carpeta donde esta la imagen 
+                              
                            
-                    </td>
+                    </td> --}}
                     <td>
                         {{-- <form action="{{ url('/assignments/'.$items->id)}}" class="d-inline" method="post">
                                 @csrf
