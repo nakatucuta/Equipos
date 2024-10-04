@@ -33,7 +33,7 @@
             <th scope="col">Modelo</th>
             <th scope="col">Marca</th>
             <th scope="col">Precio</th>
-            <th scope="col">Imagen</th>
+            {{-- <th scope="col">Imagen</th> --}}
             <th scope="col">Acciones</th>
 
            
@@ -49,11 +49,11 @@
                     <td>{{$items->modelo}}</td>
                     <td>{{$items->marca}}</td>
                     <td>{{$items->precio}}</td>
-                     <td>
-                    <img class="img-thumbnail img fluid" src="{{ asset('storage').'/'.$items->foto }}" width="50"  alt=""> {{--estamos accediendo a la carpeta donde esta la imagen --}}
+                     {{-- <td>
+                    <img class="img-thumbnail img fluid" src="{{ asset('storage').'/'.$items->foto }}" width="50"  alt=""> 
                                {{-- {{$empleado->foto}} --}}
-                           
-                    </td> 
+                           {{--estamos accediendo a la carpeta donde esta la imagen
+                    </td>  --}}
                     <td>
 
                         <a href="{{route('item.destroy', $items->id)}}"
