@@ -40,15 +40,49 @@
         }
     </style>
    @stop
-@section('js')
-<script src="{{ asset('vendor/adminlte/dist/js/select2.min.js') }}"></script>
-<script>
-    $(document).ready(function() {
-        // Inicializa Select2 en ambos selects sin imágenes
-        $('.person').select2();
-        $('.persona').select2(); // Sin formato personalizado
-    });
-</script>
-
-
-@stop
+   @section('js')
+   <script src="{{ asset('vendor/adminlte/dist/js/select2.min.js') }}"></script>
+   
+   <script>
+       $(document).ready(function() {
+           // Inicializa Select2 en el selector de personas
+           $('.person').select2();
+   
+           // Actualiza el campo oculto con el ID de la persona seleccionada
+           $('#people_id').on('change', function () {
+               $('#selectedPerson').val($(this).val());
+           });
+   
+           // Al hacer clic en un ítem disponible, muévelo a "Items Asignados"
+           $('.available-item').on('click', function() {
+               const itemId = $(this).data('id');
+               const itemText = $(this).text();
+   
+               // Verificar si ya está en la lista asignada
+               if ($('#assignedItems').find(`[data-id="${itemId}"]`).length === 0) {
+                   $('#assignedItems').append(`<li class="list-group-item assigned-item" data-id="${itemId}">${itemText}</li>`);
+                   updateAssignedItems();
+               }
+           });
+   
+           // Configura SortableJS solo en "Items Asignados" para permitir el orden y eliminación
+           Sortable.create(document.getElementById('assignedItems'), {
+               animation: 150,
+               onEnd: updateAssignedItems
+           });
+   
+           // Función para actualizar el campo oculto con los IDs de los ítems asignados
+           function updateAssignedItems() {
+               const assignedIds = Array.from(document.getElementById('assignedItems').children).map(item => item.dataset.id);
+               $('#assignedItemIds').val(assignedIds.join(',')); // Guarda los IDs en un solo campo, separados por comas
+           }
+   
+           // Permitir que los elementos de "Items Asignados" se eliminen al hacer clic
+           $('#assignedItems').on('click', '.assigned-item', function() {
+               $(this).remove();
+               updateAssignedItems();
+           });
+       });
+   </script>
+   @stop
+   

@@ -1,17 +1,20 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class person extends Model
+class Person extends Model // Asegúrate de que esté en mayúsculas
 {
     use HasFactory;
+
+    // Especifica el nombre correcto de la tabla
+    protected $table = 'people';
+
     public function getDateFormat(){
-        return 'Y-d-m h:m:s';
-      }
-    
+        return 'Y-m-d H:i:s'; // Usa el formato correcto para timestamps
+    }
+
     public function items()
     {
         return $this->hasMany('App\Models\Item');

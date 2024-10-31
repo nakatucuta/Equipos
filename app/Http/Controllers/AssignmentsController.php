@@ -47,50 +47,43 @@ class AssignmentsController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
+{
+    $campos = [
+        'people_id' => 'required|exists:people,id',
+        'item_id' => 'required|string',
+    ];
 
-        $campos= [
-            'people_id' => 'required',
-            'item_id' => 'required',
-            
-        
-        ];
+    $mensajes = [
+        'required' => 'El :attribute es requerido',
+    ];
 
-        $mensajes=[
-            'required'=>'El :attribute es requerido',      
-        ];
+    $this->validate($request, $campos, $mensajes);
 
-        $this->validate($request, $campos, $mensajes);
+    // Obtén los datos sin incluir `created_at` y `updated_at`
+    $datosEmpleado = $request->except('_token', 'item_id');
 
+    // Asigna fechas como instancias de Carbon sin formatear
+    $datosEmpleado['created_at'] = now();
+    $datosEmpleado['updated_at'] = now();
 
-        $datosEmpleado = request()->except('_token');
-        $now = now();
-        $datosEmpleado['created_at'] = $now->format('Y-d-m h:m:s');
-        $datosEmpleado['updated_at'] = $now->format('Y-d-m h:m:s');
+    // Convertimos los IDs de item_id a un array
+    $ITEM_IDS = explode(',', $request->input('item_id'));
 
-
-        
-    // Obtener los IDs de los periféricos como un array
-    $ITEM_IDS = $request->input('item_id');
-
-    // Insertar una nueva fila para cada ID de periférico en la base de datos
+    // Insertar una nueva fila para cada ID de ítem en la base de datos
     foreach ($ITEM_IDS as $item_id) {
-        // Clonar los datos del empleado para cada periférico seleccionado
         $datosEmpleadoPeriferico = $datosEmpleado;
-
-        // Establecer el ID del periférico actual
         $datosEmpleadoPeriferico['item_id'] = $item_id;
 
-
-        assignments::insert($datosEmpleadoPeriferico);
-
+        assignments::create($datosEmpleadoPeriferico);
     }
- 
 
+    return redirect()->route('item.create')
+        ->with('mensaje', 'La asignación fue guardada exitosamente.');
+}
 
-        return redirect()->route('item.create') 
-        ->with('mensaje',' La asignacion fue guardado Exitosamente..!');
-    }
+    
+
+    
 
     /**
      * Display the specified resource.
