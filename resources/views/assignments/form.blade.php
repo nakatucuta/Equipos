@@ -17,12 +17,13 @@
 <div class="form-group">
   <label for="Nombre">Item</label>
   <select class="persona" name="item_id[]" id="item_id" style="width: 100%" multiple>
-    <option value= "0" data-img="{{ asset('storage/uploads/descarga.png')}}">SELECCIONAR</option>
+    <option value="0">SELECCIONAR</option>
     @foreach($item as $developer)
-    <option value="{{ $developer->id }}" data-img="{{ asset('storage').'/'.$developer->foto }}">{{ $developer->service_tag}}</option>
+      <option value="{{ $developer->id }}">{{ $developer->service_tag }}</option>
     @endforeach
   </select>
 </div>
+
 
 
 

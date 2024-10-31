@@ -167,7 +167,7 @@
     <div class="card-header bg-success" >Memoria ram</div>
     <div class="card-body">
 
-<div class="form-group">
+{{-- <div class="form-group">
     <label for="activo">Descripcion</label>
     
     <textarea name="memoriaram" id="memoriaram" value="{{ isset($empleado->memoriaram)?$empleado->memoriaram:old('memoriaram')}}" 
@@ -175,8 +175,8 @@
     
 
     {{-- <input class="form-control" type="text" name="memoriaram" id='memoriaram' 
-    value="{{ isset($empleado->memoriaram)?$empleado->memoriaram:old('memoriaram')}}"> --}}
-</div>
+    value="{{ isset($empleado->memoriaram)?$empleado->memoriaram:old('memoriaram')}}"> 
+</div> --}}
 
 
 <div class="form-group">
@@ -211,6 +211,7 @@
                 <option  value="">SELECCIONAR</option>
                 
                 <option  value="SOLIDO">SOLIDO</option>
+                <option  value="SOLIDO">SOLIDO - MECANICO</option>
                 <option  value="MECANICO">MECANICO</option>
                
               </select>
@@ -454,7 +455,7 @@
 
   {{-- AQUI COMIENZA PERIFERICOS --}}
 
-  <div class="card border-info mb-3" >
+  {{-- <div class="card border-info mb-3" >
     <div class="card-header bg-success">FOTO</div>
     <div class="card-body">
         <div class="form-group">
@@ -462,14 +463,14 @@
             @if( isset($empleado->foto))
             <img src="{{ asset('storage').'/'.$empleado->foto }}" width="50" alt="">
             @endif
-            {{-- {{$empleado->foto}} para mostrar ruta de foto --}}
+            {{-- {{$empleado->foto}} para mostrar ruta de foto 
             <input class="form-control" type="file" name="foto" value="" id="foto" >
             <br>
         </div>
 
     </div>
     </div>
-    </div>
+    </div> --}}
 
 {{-- AQUI TERMINA PERIFERICOS --}}
 

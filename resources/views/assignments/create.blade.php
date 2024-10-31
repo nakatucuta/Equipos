@@ -42,38 +42,12 @@
    @stop
 @section('js')
 <script src="{{ asset('vendor/adminlte/dist/js/select2.min.js') }}"></script>
-
 <script>
-     $(document).ready(function() {
-    $('.person').select2();
-        });
-
-        $(document).ready(function() {
-    $('.persona').select2();
-        });
-</script>
-
-<script>
-
-    // Inicializa Select2 en el elemento <select>
-        $(document).ready(function() {
-        $('#item_id').select2({
-            templateResult: formatOption // Llama a la función formatOption para personalizar el contenido de cada opción
-        });
+    $(document).ready(function() {
+        // Inicializa Select2 en ambos selects sin imágenes
+        $('.person').select2();
+        $('.persona').select2(); // Sin formato personalizado
     });
-
-    // Función para personalizar el contenido de cada opción
-    function formatOption(option) {
-        if (!option.id) {
-            return option.text; // Si es la opción "SELECCIONAR", muestra el texto normalmente
-        }
-
-        // Para cada desarrollador, crea una opción con la marca y la imagen en miniatura
-        var $option = $(
-            '<span><img class="img-thumbnail img-fluid img-posicionada img-pequena" src="' + option.element.dataset.img + '" alt="" />' + option.text + '</span>'
-        );
-        return $option;
-    }
 </script>
 
 

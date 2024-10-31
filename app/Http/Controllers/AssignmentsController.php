@@ -88,7 +88,7 @@ class AssignmentsController extends Controller
  
 
 
-        return redirect()->route('assignments.index') 
+        return redirect()->route('item.create') 
         ->with('mensaje',' La asignacion fue guardado Exitosamente..!');
     }
 

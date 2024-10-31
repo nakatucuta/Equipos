@@ -70,6 +70,14 @@
 $(document).ready(function() {
     
   $(document).ready(function() {
+    $('.persona22').select2();
+        });
+
+        $(document).ready(function() {
+    $('.person20').select2();
+        });
+
+        $(document).ready(function() {
     $('.person6').select2();
         });
 

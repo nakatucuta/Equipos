@@ -18,6 +18,7 @@ class ItemController extends Controller
      */
     public function index()
     {
+
       // Obtener los datos de la base de datos
       $productos = DB::table('items')
       ->select('marca', DB::raw('COUNT(id) as total'))
@@ -45,7 +46,18 @@ class ItemController extends Controller
     public function create()
     {   $persona = person::select('*')->get();
         $periferico = Peripherals::select('*')->get();
-        return view('item.create',["persona"=>$persona,"periferico"=>$periferico]);
+
+        
+        $persona2 = person::select('*')->get();
+        $item2 = DB::table('items')
+        ->whereNotExists(function ($query) {
+            $query->select(DB::raw(1))
+                ->from('assignments')
+                ->whereRaw('assignments.item_id = items.id');
+        })
+        ->get();
+
+        return view('item.create',["persona"=>$persona,"periferico"=>$periferico,"persona2"=>$persona2,"item2"=>$item2 ]);
     }
 
     /**
@@ -87,7 +99,7 @@ class ItemController extends Controller
         $datosEmpleado['estado'] = 1;
         $datosEmpleado['user_id'] = auth()->user()->id;
         Item::insert($datosEmpleado);
-        return redirect()->route('item.index');
+        return redirect()->route('assignments.create');
     }
 
     /**
