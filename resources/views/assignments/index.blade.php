@@ -4,7 +4,6 @@
 
 @section('content_header')
     <h1>ASIGNACIONES
-
       
     </h1>
 
@@ -35,7 +34,6 @@
             <th scope="col">Marca</th>
             {{-- <th scope="col">Imagen</th> --}}
             <th scope="col">Acciones</th>
-
            
         </tr>
     </thead>
@@ -51,7 +49,7 @@
                     <td>{{$items->marca}}</td>
                      {{-- <td>
                     <img class="img-thumbnail img fluid" src="{{ asset('storage').'/'.$items->foto }}" width="50"  alt=""> {{--estamos accediendo a la carpeta donde esta la imagen 
-                              
+                             
                            
                     </td> --}}
                     <td>
@@ -111,7 +109,7 @@
           font-weight: bold !important;
         }
         
-         .dataTables_length label {
+        .dataTables_length label {
           
           font-weight: bold !important;
         } 

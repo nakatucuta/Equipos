@@ -34,11 +34,13 @@ class AssignmentsController extends Controller
     {   
         $persona = person::select('*')->get();
         $item = DB::table('items')
+        ->leftJoin('users', 'items.user_id', '=', 'users.id')
         ->whereNotExists(function ($query) {
             $query->select(DB::raw(1))
                 ->from('assignments')
                 ->whereRaw('assignments.item_id = items.id');
         })
+        ->select('items.*', 'users.name as user_name')
         ->get();
         return view('assignments.create',compact('persona','item'));
     }
