@@ -28,35 +28,21 @@
     </div>
 </div>
 
-
-
-
-
-
-
-    
+   
 <div class="row" >
 <div class="col-lg-4">
 
-
     {{-- <div  >
-    debe desaparecerJHJJJJJJJJJJJJJJJJJJJJJJJJJ
-   
+    debe desaparecerJHJJJJJJJJJJJJJJJJJJJJJJJJJ   
    
     </div> --}}
  <div class="card card-info card-outline card-tabs">
             <div class="card-header">
                 <h2 class="card-title text-center">
-                      <i class="fas fa-box-open" style="font-size: 45px; color: #3333ff; "></i>
-                  
-                      
-                </h2>
-
-                
-            </div>
-            
-            <div class="card-body">
-              
+                      <i class="fas fa-box-open" style="font-size: 45px; color: #3333ff; "></i>   
+                </h2>                
+            </div>            
+            <div class="card-body">              
                 <div class="card border-info mb-3" >
                     <div class="card-header bg-success">EQUIPO</div>
                     <div class="card-body">
@@ -76,42 +62,44 @@
     <label for="Nombre">MARCA</label>
     <select class="person5" name="marca" id="marca" style="width: 100%" required>
         <option  value="">SELECCIONAR</option>
-        <option value="Dell">Dell</option>
         <option value="Acer">Acer</option>
-        <option value="Grandstream">Grandstream</option> 
         <option value="Alienware">Alienware</option>
         <option value="Apple">Apple</option>
-        <option value="Asus">Asus</option>    
-        <option value="Gateway">Gateway</option>  
+        <option value="APC">APC</option>
+        <option value="Asus">Asus</option>
+        <option value="Avision">Avision</option>
+        <option value="Canon">Canon</option>
+        <option value="CDP">CDP</option>
+        <option value="Dell">Dell</option>
+        <option value="Digitalpos">Digitalpos</option>
+        <option value="Dji">Dji</option>
+        <option value="Epson">Epson</option>
+        <option value="Fujitsu">Fujitsu</option>
+        <option value="Gateway">Gateway</option>
+        <option value="Genius">Genius</option>
+        <option value="Grandstream">Grandstream</option>
         <option value="HP">HP</option>
-        <option value="LG">LG</option> 
+        <option value="Kyocera">Kyocera</option>
+        <option value="LG">LG</option>
+        <option value="Logitech">Logitech</option>
+        <option value="Motorola">Motorola</option>
         <option value="MSI">MSI</option>
         <option value="Omen by HP">Omen by HP</option>
-        <option value="Samsung">Samsung</option>  
-        <option value="Sony">Sony</option>
-        <option value="Toshiba">Toshiba</option>
-        <option value="Vaio">Vaio</option>
-        <option value="CDP">CDP</option> 
-        <option value="APC">APC</option>
-        <option value="Genius">Genius</option> 
-        <option value="fujitsu">fujitsu</option>
-        <option value="Redmi">Redmi</option>  
-        <option value="Kyocera">Kyocera</option>   
-        <option value="Tsc">Tsc</option>
-        <option value="Logitech">Logitech</option>
-        <option value="Scanzen">Scanzen</option>
-        <option value="Avision">Avision</option>
-        <option value="Epson">Epson</option>
         <option value="Powest">Powest</option>
-        <option value="Sat">Sat</option>   
-        <option value="Ultraline">Ultraline</option> 
-        <option value="Startec">Startec</option> 
+        <option value="Redmi">Redmi</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Sat">Sat</option>
+        <option value="Scanzen">Scanzen</option>
+        <option value="Sony">Sony</option>
+        <option value="Startec">Startec</option>
+        <option value="Toshiba">Toshiba</option>
+        <option value="Tsc">Tsc</option>
+        <option value="Ultraline">Ultraline</option>
+        <option value="Vaio">Vaio</option>
+        <option value="Wattana">Wattana</option>
+        <option value="Xiaomi">Xiaomi</option>
         <option value="Yuansheng">Yuansheng</option>
-        <option value="Xiaomi">Xiaomi</option>  
-        <option value="Dji">Dji</option> 
-        <option value="Motorola">Motorola</option>
-        <option value="Digitalpos">Digitalpos</option> 
-        <option value="Wattana">Wattana</option>                    
+                    
     </select>
 </div>
 
@@ -346,12 +334,6 @@
             </div>
 
                     {{-- AQUI TERMINA --}}
-
-                    
-   
-    
-    
-
     
 </div>
 </div>
@@ -364,13 +346,9 @@
                   <i class="fas fa-laptop" style="font-size: 45px; color: #3333ff; "></i>
                   </h2>
                 </div>
-                
-                 
-        
+   
     
         <div class="card-body" id="inputsuperoculto1" >
-
-
 
              {{-- aqui comienza copia de seguridad --}}
 
@@ -408,7 +386,6 @@
             </div>
         {{-- aqui termina  --}}
 
-       
        
 {{-- 
         <div class="card border-info mb-3" >
