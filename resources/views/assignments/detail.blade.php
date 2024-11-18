@@ -16,12 +16,11 @@
                 <img class="img-thumbnail img-fluid" src="{{ asset('storage').'/'.$item->foto }}" alt="">
             </div>
             <div class="col-md-4">
-                <h2>ITEM: {{ $item->tipo_item }}</h2>
-                
+                <h2>ITEM: {{ $item->tipo_item }}</h2> 
                 
                 <p><strong>ID:</strong> {{ $item->id }}</p>
                 <p><strong>SERVICETAG:</strong>{{ $item->service_tag }}</p>
-                 <p><strong>FUNCIONARIO:</strong> {{ $item->nombres }}</p>
+                <p><strong>FUNCIONARIO:</strong> {{ $item->nombres }}</p>
                 <p><strong>CARGO: </strong>{{ $item->cargo }}</p>
                 <p><strong>ITEM: </strong>{{ $item->tipo_item }}</p>
                 
@@ -36,8 +35,6 @@
                 <p><strong>Tecnologia disco duro:</strong> {{ $item->tegnologia }}</p>
                 <p><strong>Cantidad disco duro:</strong> {{ $item->cantidad_discoduro }}</p>
                  --}}
-                
-                
                 
             </div>
             <div class="col-md-4">

@@ -21,8 +21,7 @@ class AssignmentsController extends Controller
         $item = DB::table('assignments as a')
         ->join('people as b', 'a.people_id', '=', 'b.id')
         ->join('items as c', 'a.item_id', '=', 'c.id')
-        ->select('a.id', 'b.nombres', 'b.cargo', 'c.tipo_item', 'c.service_tag','c.foto'
-        ,'c.marca')
+        ->select('a.id', 'b.nombres', 'b.cargo', 'c.tipo_item', 'c.service_tag','c.foto','c.marca', 'a.people_id')
         ->get();
         return view('assignments.index',compact('item'));
     }
@@ -141,6 +140,21 @@ class AssignmentsController extends Controller
             ->first();
     
         return view('assignments.detail', ["item" => $item,"assignment" => $assignment]);
+    }
+
+    public function general($id)
+    {   
+        $people = person::findOrFail($id); // Usar el modelo Assignment en lugar de DB::table
+    
+        $items = assignments::join('people as b', 'assignments.people_id', '=', 'b.id')
+            ->join('items as c', 'assignments.item_id', '=', 'c.id')
+            ->select('assignments.id', 'b.nombres', 'b.cargo', 'c.tipo_item', 'c.service_tag', 'c.foto', 'c.marca', 'c.modelo'
+                , 'c.nombre_aw', 'c.ip', 'c.mac', 'c.activo', 
+            )
+            ->where('assignments.people_id', $id)
+            ->get();
+    
+        return view('assignments.general', ["items" => $items,"people" => $people]);
     }
     
 }

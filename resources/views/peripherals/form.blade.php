@@ -52,6 +52,6 @@ value="{{ isset($empleado->marca)?$empleado->marca:old('marca')}}">
     </div>
       
 
-<input class="btn btn-success" type="submit" value="enviar">
+<input class="btn btn-success" type="submit" value="ENVIAR">
 <a  class="btn btn-primary" href="{{url('person')}}" class="btn  btn-success"> REGRESAR</a>
 

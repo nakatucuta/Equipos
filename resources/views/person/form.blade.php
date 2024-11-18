@@ -35,6 +35,6 @@
 value="{{ isset($empleado->direccion)?$empleado->direccion:old('direccion')}}">
 </div>
 
-<input class="btn btn-success" type="submit" value="enviar">
+<input class="btn btn-success" type="submit" value="ENVIAR">
 <a  class="btn btn-primary" href="{{url('person')}}" class="btn  btn-success"> REGRESAR</a>
 
