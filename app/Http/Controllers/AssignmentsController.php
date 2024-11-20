@@ -149,9 +149,19 @@ class AssignmentsController extends Controller
         $items = assignments::join('people as b', 'assignments.people_id', '=', 'b.id')
             ->join('items as c', 'assignments.item_id', '=', 'c.id')
             ->select('assignments.id', 'b.nombres', 'b.cargo', 'c.tipo_item', 'c.service_tag', 'c.foto', 'c.marca', 'c.modelo'
-                , 'c.nombre_aw', 'c.ip', 'c.mac', 'c.activo', 
+                , 'c.nombre_aw', 'c.ip', 'c.mac', 'c.activo', 'c.sistema_operativo', 'c.procesador', 'c.capacidad_ram',
+                'c.capacidad_discoduro','c.nombre_carpeta','c.correo_copiaseg','c.oficce','c.tipo','c.correo_ofice'
             )
             ->where('assignments.people_id', $id)
+            ->orderByRaw("
+                CASE 
+                    WHEN c.tipo_item = 'CPU' THEN 1
+                    WHEN c.tipo_item = 'PORTATIL' THEN 2
+                    WHEN c.tipo_item = 'TABLET' THEN 3
+                    WHEN c.tipo_item = 'CELULAR' THEN 4
+                    WHEN c.tipo_item = 'PANTALLA' THEN 5
+                    ELSE 6
+                END")
             ->get();
     
         return view('assignments.general', ["items" => $items,"people" => $people]);

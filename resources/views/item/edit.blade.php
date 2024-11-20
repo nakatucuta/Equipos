@@ -14,7 +14,6 @@
                 @csrf
                 {{ method_field('PATCH') }}
 
-
                 @include('item.form', ['modo' => 'Editar'])
 
         </div>
