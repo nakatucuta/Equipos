@@ -150,7 +150,8 @@ class AssignmentsController extends Controller
             ->join('items as c', 'assignments.item_id', '=', 'c.id')
             ->select('assignments.id', 'b.nombres', 'b.cargo', 'c.tipo_item', 'c.service_tag', 'c.foto', 'c.marca', 'c.modelo'
                 , 'c.nombre_aw', 'c.ip', 'c.mac', 'c.activo', 'c.sistema_operativo', 'c.procesador', 'c.capacidad_ram',
-                'c.capacidad_discoduro','c.nombre_carpeta','c.correo_copiaseg','c.oficce','c.tipo','c.correo_ofice'
+                'c.capacidad_discoduro','c.nombre_carpeta','c.correo_copiaseg','c.oficce','c.tipo','c.correo_ofice',
+                'c.fecha_compra','c.fecha_mantenimiento',
             )
             ->where('assignments.people_id', $id)
             ->orderByRaw("

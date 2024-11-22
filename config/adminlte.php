@@ -342,7 +342,7 @@ return [
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'Item',
+                    'text' => 'Items',
                     'url'  => 'item',
                 ],
                 [
@@ -350,7 +350,7 @@ return [
                     'url'  => 'assignments',
                 ],
                 [
-                    'text' => 'funcionario',
+                    'text' => 'Funcionarios',
                     'url'  => 'person',
                 ],
                 
@@ -372,7 +372,7 @@ return [
         
         ['header' => 'labels'],
         [
-            'text'       => 'ESTADISTICAS',
+            'text'       => 'Estadisticas',
             'icon_color' => 'blue',
             'url'        => 'grafica-barras',
             'label'       => 'REVISAR',  

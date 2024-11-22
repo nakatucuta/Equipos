@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\person;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PersonController extends Controller
 {
@@ -12,7 +13,10 @@ class PersonController extends Controller
      */
     public function index()
     {
-        $person = person::select('*')->get();
+        $person = person::leftjoin('assignments as b', 'people.id', '=', 'b.people_id')
+            ->select('people.id','people.nombres','people.direccion','people.correo', 'people.cedula', 'people.cargo', DB::raw('COUNT(b.id) as assignment_count'))
+            ->groupBy('people.id', 'people.cedula','people.nombres','people.direccion','people.correo','people.cargo')
+            ->get();
         return view('person.index',["person"=>$person]);
     }
 

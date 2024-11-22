@@ -25,6 +25,9 @@
                         <li>
                             <strong>Dirección:</strong> {{ $people->direccion }}
                         </li>
+                        <li>
+                            <strong>Correo:</strong> <em>{{ $people->correo }}</em>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -130,7 +133,15 @@
                                                 <label><strong>Office:</strong></label>
                                                 <span>{{ $item->tipo }} : {{ $item->oficce }}</span>
                                                 <span><em>{{ strtolower($item->correo_ofice) }}</em></span>
-                                            </div>                                            
+                                            </div>
+                                            <div class="list-group-item">
+                                                <label><strong>Fecha compra:</strong></label>
+                                                <span>{{ $item->fecha_compra }}</span>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <label><strong>Ultimo mantenimiento:</strong></label>
+                                                <span>{{ $item->fecha_mantenimiento }}</span>
+                                            </div>
                                         </div>
                                     @else
                                         <div class="col-md-4">
@@ -181,7 +192,7 @@
         .card-header i {
             font-size: 1.2rem;
             color: #202020;
-            padding-right: 10px; 
+            padding-right: 10px;
         }
 
         .list-group-item {

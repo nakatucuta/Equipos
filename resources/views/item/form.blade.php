@@ -4,37 +4,66 @@
         <label for="Nombre">SELECCIONE QUE ITEM DESEA AGREGAR</label>
         <select class="person2" name="tipo_item" id="tipo_item" style="width: 100%" required>
             <option value="">SELECCIONAR</option>
-            <option value="PANTALLA" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'PANTALLA' ? 'selected' : '' }}>PANTALLA</option>
-            <option value="CPU" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'CPU' ? 'selected' : '' }}>CPU</option>
-            <option value="CELULAR" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'CELULAR' ? 'selected' : '' }}>CELULAR</option>
-            <option value="TABLET" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'TABLET' ? 'selected' : '' }}>TABLET</option>
-            <option value="IMPRESORA" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'IMPRESORA' ? 'selected' : '' }}>IMPRESORA</option>
-            <option value="MOUSE" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'MOUSE' ? 'selected' : '' }}>MOUSE</option>
-            <option value="TECLADO" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'TECLADO' ? 'selected' : '' }}>TECLADO</option>
-            <option value="BATERIA" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'BATERIA' ? 'selected' : '' }}>BATERIA</option>
-            <option value="PORTATIL" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'PORTATIL' ? 'selected' : '' }}>PORTATIL</option>
-            <option value="PARLANTE" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'PARLANTE' ? 'selected' : '' }}>PARLANTE</option>
-            <option value="TELEFONO" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'TELEFONO' ? 'selected' : '' }}>TELEFONO</option>
-            <option value="SCANER" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'SCANER' ? 'selected' : '' }}>SCANERT</option>
-            <option value="CAMARA" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'CAMARA' ? 'selected' : '' }}>CAMARA</option>
-            <option value="DIADEMA" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'DIADEMA' ? 'selected' : '' }}>DIADEMA</option>
-            <option value="DIGITURNO" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'DIGITURNO' ? 'selected' : '' }}>DIGITURNO</option>
-            <option value="PLANTA DE SONIDO" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'PLANTA DE SONIDO' ? 'selected' : '' }}>PLANTA DE SONIDO</option>
-            <option value="VIDEOBEAM" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'VIDEOBEAM' ? 'selected' : '' }}>VIDEOBEAM</option>
-            <option value="DRONE" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'DRONE' ? 'selected' : '' }}>DRONE</option>
-            <option value="PISTOLA LASER" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'PISTOLA LASER' ? 'selected' : '' }}>PISTOLA LASER</option>
+            <option value="PANTALLA"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'PANTALLA' ? 'selected' : '' }}>PANTALLA
+            </option>
+            <option value="CPU" {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'CPU' ? 'selected' : '' }}>
+                CPU</option>
+            <option value="CELULAR"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'CELULAR' ? 'selected' : '' }}>CELULAR
+            </option>
+            <option value="TABLET"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'TABLET' ? 'selected' : '' }}>TABLET</option>
+            <option value="IMPRESORA"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'IMPRESORA' ? 'selected' : '' }}>IMPRESORA
+            </option>
+            <option value="MOUSE"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'MOUSE' ? 'selected' : '' }}>MOUSE</option>
+            <option value="TECLADO"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'TECLADO' ? 'selected' : '' }}>TECLADO
+            </option>
+            <option value="BATERIA"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'BATERIA' ? 'selected' : '' }}>BATERIA
+            </option>
+            <option value="PORTATIL"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'PORTATIL' ? 'selected' : '' }}>PORTATIL
+            </option>
+            <option value="PARLANTE"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'PARLANTE' ? 'selected' : '' }}>PARLANTE
+            </option>
+            <option value="TELEFONO"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'TELEFONO' ? 'selected' : '' }}>TELEFONO
+            </option>
+            <option value="SCANER"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'SCANER' ? 'selected' : '' }}>SCANERT
+            </option>
+            <option value="CAMARA"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'CAMARA' ? 'selected' : '' }}>CAMARA</option>
+            <option value="DIADEMA"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'DIADEMA' ? 'selected' : '' }}>DIADEMA
+            </option>
+            <option value="DIGITURNO"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'DIGITURNO' ? 'selected' : '' }}>DIGITURNO
+            </option>
+            <option value="PLANTA DE SONIDO"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'PLANTA DE SONIDO' ? 'selected' : '' }}>
+                PLANTA DE SONIDO</option>
+            <option value="VIDEOBEAM"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'VIDEOBEAM' ? 'selected' : '' }}>VIDEOBEAM
+            </option>
+            <option value="DRONE"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'DRONE' ? 'selected' : '' }}>DRONE</option>
+            <option value="PISTOLA LASER"
+                {{ isset($empleado->tipo_item) && $empleado->tipo_item == 'PISTOLA LASER' ? 'selected' : '' }}>PISTOLA
+                LASER</option>
         </select>
     </div>
+    
 </div>
 
 
 <div class="row">
     <div class="col-lg-4">
-
-        {{-- <div  >
-    debe desaparecerJHJJJJJJJJJJJJJJJJJJJJJJJJJ   
-   
-    </div> --}}
         <div class="card card-info card-outline card-tabs">
             <div class="card-header">
                 <h2 class="card-title text-center">
@@ -45,107 +74,129 @@
                 <div class="card border-info mb-3">
                     <div class="card-header bg-success">EQUIPO</div>
                     <div class="card-body">
-                        {{-- <div class="form-group">
-    <label for="activo">Nombre del equipo</label>    
-    <input class="form-control" type="text" name="est_actual" id='est_actual' 
-    value="{{ isset($empleado->est_actual)?$empleado->est_actual:old('est_actual')}}">
-</div> --}}
                         <div class="form-group">
                             <label for="activo">Fecha de compra</label>
                             <input class="form-control" type="date" name="fecha_compra" id='fecha_compra'
                                 value="{{ isset($empleado->fecha_compra) ? $empleado->fecha_compra : old('fecha_compra') }}">
                         </div>
-
-
                         <div class="form-group">
                             <label for="Nombre">MARCA</label>
                             <select class="person5" name="marca" id="marca" style="width: 100%" required>
                                 <option value="">SELECCIONAR</option>
                                 <option value="Acer"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Acer' ? 'selected' : '' }}>Acer</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Acer' ? 'selected' : '' }}>Acer
+                                </option>
                                 <option value="Alienware"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Alienware' ? 'selected' : '' }}>Alienware</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Alienware' ? 'selected' : '' }}>
+                                    Alienware</option>
                                 <option value="Apple"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Apple' ? 'selected' : '' }}>Apple</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Apple' ? 'selected' : '' }}>
+                                    Apple</option>
                                 <option value="APC"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'APC' ? 'selected' : '' }}>APC</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'APC' ? 'selected' : '' }}>APC
+                                </option>
                                 <option value="Asus"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Asus' ? 'selected' : '' }}>Asus</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Asus' ? 'selected' : '' }}>Asus
+                                </option>
                                 <option value="Avision"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Avision' ? 'selected' : '' }}>Avision</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Avision' ? 'selected' : '' }}>
+                                    Avision</option>
                                 <option value="Canon"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Canon' ? 'selected' : '' }}>Canon</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Canon' ? 'selected' : '' }}>
+                                    Canon</option>
                                 <option value="CDP"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'CDP' ? 'selected' : '' }}>CDP</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'CDP' ? 'selected' : '' }}>CDP
+                                </option>
                                 <option value="Dell"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Dell' ? 'selected' : '' }}>Dell</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Dell' ? 'selected' : '' }}>Dell
+                                </option>
                                 <option value="Digitalpos"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Digitalpos' ? 'selected' : '' }}>Digitalpos</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Digitalpos' ? 'selected' : '' }}>
+                                    Digitalpos</option>
                                 <option value="Dji"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Dji' ? 'selected' : '' }}>Dji</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Dji' ? 'selected' : '' }}>Dji
+                                </option>
                                 <option value="Epson"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Epson' ? 'selected' : '' }}>Epson</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Epson' ? 'selected' : '' }}>
+                                    Epson</option>
                                 <option value="Fujitsu"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Fujitsu' ? 'selected' : '' }}>Fujitsu</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Fujitsu' ? 'selected' : '' }}>
+                                    Fujitsu</option>
                                 <option value="Gateway"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Gateway' ? 'selected' : '' }}>Gateway</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Gateway' ? 'selected' : '' }}>
+                                    Gateway</option>
                                 <option value="Genius"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Genius' ? 'selected' : '' }}>Genius</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Genius' ? 'selected' : '' }}>
+                                    Genius</option>
                                 <option value="Grandstream"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Grandstream' ? 'selected' : '' }}>Grandstream</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Grandstream' ? 'selected' : '' }}>
+                                    Grandstream</option>
                                 <option value="HP"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'HP' ? 'selected' : '' }}>HP</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'HP' ? 'selected' : '' }}>HP
+                                </option>
                                 <option value="Kyocera"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Kyocera' ? 'selected' : '' }}>Kyocera</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Kyocera' ? 'selected' : '' }}>
+                                    Kyocera</option>
                                 <option value="LG"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'LG' ? 'selected' : '' }}>LG</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'LG' ? 'selected' : '' }}>LG
+                                </option>
                                 <option value="Logitech"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Logitech' ? 'selected' : '' }}>Logitech</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Logitech' ? 'selected' : '' }}>
+                                    Logitech</option>
                                 <option value="Motorola"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Motorola' ? 'selected' : '' }}>Motorola</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Motorola' ? 'selected' : '' }}>
+                                    Motorola</option>
                                 <option value="MSI"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'MSI' ? 'selected' : '' }}>MSI</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'MSI' ? 'selected' : '' }}>MSI
+                                </option>
                                 <option value="Omen by HP"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Omen by HP' ? 'selected' : '' }}>Omen by HP</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Omen by HP' ? 'selected' : '' }}>
+                                    Omen by HP</option>
                                 <option value="Powest"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Powest' ? 'selected' : '' }}>Powest</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Powest' ? 'selected' : '' }}>
+                                    Powest</option>
                                 <option value="Redmi"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Redmi' ? 'selected' : '' }}>Redmi</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Redmi' ? 'selected' : '' }}>
+                                    Redmi</option>
                                 <option value="Samsung"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Samsung' ? 'selected' : '' }}>Samsung</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Samsung' ? 'selected' : '' }}>
+                                    Samsung</option>
                                 <option value="Sat"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Sat' ? 'selected' : '' }}>Sat</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Sat' ? 'selected' : '' }}>Sat
+                                </option>
                                 <option value="Scanzen"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Scanzen' ? 'selected' : '' }}>Scanzen</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Scanzen' ? 'selected' : '' }}>
+                                    Scanzen</option>
                                 <option value="Sony"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Sony' ? 'selected' : '' }}>Sony</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Sony' ? 'selected' : '' }}>Sony
+                                </option>
                                 <option value="Startec"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Startec' ? 'selected' : '' }}>Startec</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Startec' ? 'selected' : '' }}>
+                                    Startec</option>
                                 <option value="Toshiba"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Toshiba' ? 'selected' : '' }}>Toshiba</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Toshiba' ? 'selected' : '' }}>
+                                    Toshiba</option>
                                 <option value="Tsc"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Tsc' ? 'selected' : '' }}>Tsc</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Tsc' ? 'selected' : '' }}>Tsc
+                                </option>
                                 <option value="Ultraline"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Ultraline' ? 'selected' : '' }}>Ultraline</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Ultraline' ? 'selected' : '' }}>
+                                    Ultraline</option>
                                 <option value="Vaio"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Vaio' ? 'selected' : '' }}>Vaio</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Vaio' ? 'selected' : '' }}>Vaio
+                                </option>
                                 <option value="Wattana"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Wattana' ? 'selected' : '' }}>Wattana</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Wattana' ? 'selected' : '' }}>
+                                    Wattana</option>
                                 <option value="Xiaomi"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Xiaomi' ? 'selected' : '' }}>Xiaomi</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Xiaomi' ? 'selected' : '' }}>
+                                    Xiaomi</option>
                                 <option value="Yuansheng"
-                                    {{ isset($empleado->marca) && $empleado->marca == 'Yuansheng' ? 'selected' : '' }}>Yuansheng</option>
+                                    {{ isset($empleado->marca) && $empleado->marca == 'Yuansheng' ? 'selected' : '' }}>
+                                    Yuansheng</option>
 
                             </select>
                         </div>
-
-
-                        {{-- <div class="form-group">
-    <label for="activo">Marca</label>    
-    <input class="form-control" type="text" name="marca" id='marca' 
-    value="{{ isset($empleado->marca)?$empleado->marca:old('marca')}}">
-</div> --}}
-
                         <div class="form-group">
                             <label for="activo">Modelo</label>
                             <input class="form-control" type="text" name="modelo" id='modelo'
@@ -166,9 +217,8 @@
 
                         <div class="form-group" id="inputsuperoculto5">
                             <label for="activo">Procesador</label>
-                            <textarea name="procesador" id="procesador"
-                                value="{{ isset($empleado->procesador) ? $empleado->procesador : old('procesador') }}" class="form-control"
-                                rows="5" maxlength="600"></textarea>
+                            <input class="form-control" type="text" name="procesador" id="procesador"
+                                value="{{ isset($empleado->procesador) ? $empleado->procesador : old('procesador') }}">
                         </div>
 
                         <div class="form-group">
@@ -193,19 +243,6 @@
                 <div class="card border-info mb-3" id="inputsuperoculto2">
                     <div class="card-header bg-success">Memoria ram</div>
                     <div class="card-body">
-
-                        {{-- <div class="form-group">
-    <label for="activo">Descripcion</label>
-    
-    <textarea name="memoriaram" id="memoriaram" value="{{ isset($empleado->memoriaram)?$empleado->memoriaram:old('memoriaram')}}" 
-        class="form-control" rows="5" maxlength="600"></textarea>
-    
-
-    {{-- <input class="form-control" type="text" name="memoriaram" id='memoriaram' 
-    value="{{ isset($empleado->memoriaram)?$empleado->memoriaram:old('memoriaram')}}"> 
-</div> --}}
-
-
                         <div class="form-group">
                             <label for="activo">Capacidad</label>
                             <input class="form-control" type="text" name="capacidad_ram" id='capacidad_ram'
@@ -232,9 +269,6 @@
                         </div>
                         <div class="form-group">
                             <label for="activo">Tecnologia</label>
-                            {{-- <input class="form-control" type="text" name="tegnologia" id='tegnologia' 
-                value="{{ isset($empleado->tegnologia)?$empleado->tegnologia:old('tegnologia')}}"> --}}
-
                             <select class="person4" name="tegnologia" id="tegnologia" style="width: 100% ">
                                 <option value="">SELECCIONAR</option>
                                 <option value="SOLIDO"
@@ -246,9 +280,7 @@
                                 <option value="SOLIDO-MECANICO"
                                     {{ isset($empleado->tegnologia) && $empleado->tegnologia == 'SOLIDO-MECANICO' ? 'selected' : '' }}>
                                     SOLIDO-MECANICO</option>
-
                             </select>
-
 
                         </div>
                         <div class="form-group">
@@ -326,13 +358,6 @@
                                 KaiOS</option>
 
                         </select>
-
-
-                        {{-- <div class="form-group">
-                        <label for="activo">Sistema Operativo</label>    
-                        <input class="form-control" type="text" name="sistema_operativo" id='sistema_operativo' 
-                        value="{{ isset($empleado->sistema_operativo)?$empleado->sistema_operativo:old('sistema_operativo')}}">
-                    </div> --}}
 
                         <div class="form-group">
                             <label for="activo">nombre_aw</label>
@@ -412,7 +437,6 @@
                 </h2>
             </div>
 
-
             <div class="card-body" id="inputsuperoculto1">
 
                 {{-- aqui comienza copia de seguridad --}}
@@ -454,35 +478,20 @@
                 </div>
                 {{-- aqui termina  --}}
 
-
-                {{-- 
-        <div class="card border-info mb-3" >
-            <div class="card-header bg-success">BOARD</div>
-            <div class="card-body">
-                
-                <div class="form-group">
-                    <label for="activo">Board</label>    
-                    <input class="form-control" type="text" name="board" id='board' 
-                    value="{{ isset($empleado->board)?$empleado->board:old('board')}}">
-                </div>
-
-
-
-
-            </div>
-        </div> --}}
-
-
             </div>
         </div>
 
-        {{-- AQUI COMIENZA RESPONSABLE --}}
 
-        {{-- <div class="card border-info mb-3" >
+    </div>
+</div>
+
+{{-- AQUI COMIENZA RESPONSABLE --}}
+
+{{-- <div class="card border-info mb-3" >
     <div class="card-header bg-success">RESPONSABLE</div>
     <div class="card-body"> --}}
 
-        {{-- <div class="form-group" >
+{{-- <div class="form-group" >
             <label for="Nombre">RESPONSABLE</label>
             <select class="person " name="people_id" id="people_id"  style="width: 100% ">
             <option  value="0">SELECCIONAR</option>
@@ -493,14 +502,14 @@
           </select>
         </div> --}}
 
-        {{-- </div>   </div> --}}
+{{-- </div>   </div> --}}
 
-        {{-- AQUI TERMINA --}}
+{{-- AQUI TERMINA --}}
 
 
-        {{-- AQUI COMIENZA PERIFERICOS --}}
+{{-- AQUI COMIENZA PERIFERICOS --}}
 
-        {{-- <div class="card border-info mb-3" >
+{{-- <div class="card border-info mb-3" >
     <div class="card-header bg-success">FOTO</div>
     <div class="card-body">
         <div class="form-group">
@@ -517,8 +526,8 @@
     </div>
     </div> --}}
 
-        {{-- AQUI TERMINA PERIFERICOS --}}
+{{-- AQUI TERMINA PERIFERICOS --}}
 
 
-        <input class="btn btn-success" type="submit" value="ENVIAR">
-        <a class="btn btn-primary" href="{{ url('item') }}" class="btn  btn-success"> REGRESAR</a>
+<input class="btn btn-success" type="submit" value="ENVIAR">
+<a class="btn btn-primary" href="{{ url('item') }}" class="btn  btn-success"> REGRESAR</a>

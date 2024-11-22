@@ -21,7 +21,7 @@
             position: relative;
             right: 0;">
         <i class="fas fa-book"></i> </a>
-        <br><br>
+    <br><br>
     <table class="table table-hover table-striped table-bordered  {{-- table-responsive --}}" style="border: 1px solid #000000;"
         id="sivigila">
         <thead class="table table-hover table-info table-bordered "
@@ -75,7 +75,8 @@
                             <i class="fas fa-eye fa-spin  fa-fw"></i>
                         </a>
 
-                        <a class="btn  btn-warning btn-sm" href="{{ url('/item/' . $items->id . '/edit') }}" class="ref">
+                        <a class="btn  btn-warning btn-sm" href="{{ url('/item/' . $items->id . '/edit') }}"
+                            class="ref">
                             <i class="fas fa-cog fa-spin  fa-fw"></i>
                         </a>
 
@@ -85,26 +86,20 @@
                             </button>
                         @else
                             <a href="{{ route('baja1', $items->id) }}"
-                                onclick="event.preventDefault();
-                                    if (confirm('¿Está seguro de que desea dar de baja a este item?')) {
-                                        document.getElementById('delete-form-{{ $items->id }}').submit();
-                                    }"
+                                onclick="event.preventDefault(); if (confirm('¿Está seguro de que desea dar de baja este item?')) {
+                                    document.getElementById('baja-item-{{ $items->id }}').submit();
+                                }"
                                 class="btn btn-danger btn-sm">
                                 <i class="fas fa-toggle-on"></i>
                             </a>
+                            <form id="baja-item-{{ $items->id }}" action="{{ route('baja1', $items->id) }}"
+                                method="GET" style="display: none;">
+                                @csrf
+                            </form>
                         @endif
-                        <form id="delete-form-{{ $items->id }}" action="{{ route('baja1', $items->id) }}"
-                            method="GET" style="display: none;">
-                            @csrf
-                        </form>
-
-
-
-
-
                     </td>
+                </tr>
             @endforeach
-            </tr>
     </table>
 
 

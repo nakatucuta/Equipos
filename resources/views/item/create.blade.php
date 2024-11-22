@@ -23,6 +23,16 @@
         <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/select2.css') }}">
     @stop
     <style>
+        /* Asegura mayor especificidad para sobrescribir los estilos predeterminados */
+        .select2-container .select2-selection--single {
+            height: auto !important;
+            /* Permite una altura automática */
+            min-height: 28px;
+            font-weight: bold;
+            
+            /* Opcional: establece una altura mínima */
+        }
+
         .select2-results__option {
             font-size: 14px;
             color: #333;
@@ -134,6 +144,7 @@
                         $('#inputsuperoculto1').show();
                         $('#inputsuperoculto2').show();
                         $('#inputsuperoculto3').show();
+                        $('#inputsuperoculto5').show();
                     } else {
                         $('#inputsuperoculto').hide();
                         $('#inputsuperoculto1').hide();
@@ -146,6 +157,7 @@
                         $('#inputsuperoculto1').show();
                         $('#inputsuperoculto2').show();
                         $('#inputsuperoculto3').show();
+                        $('#inputsuperoculto5').show();
                     }
                 });
             });
