@@ -11,9 +11,11 @@
         <!-- Información del Usuario -->
         <div class="col-md-4 col-12 mb-3 info-user">
             <div class="card">
-                <div class="card-header bg-primary text-white">
-                    <i class="fas fa-address-card me-2"></i>Información del Funcionario
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <span><i class="fas fa-address-card me-2"></i>Información del Funcionario</span>
+                    <span class="ms-auto text-end" style="margin-left: auto">[{{$people->id}}]</span>
                 </div>
+               
                 <div class="card-body">
                     <ul class="list-unstyled">
                         <li>
@@ -68,9 +70,9 @@
                                         <i class="fas fa-tag me-2"></i>
                                     @endif
 
-                                    {{ $item->tipo_item }}:<strong class="modelo">{{ $item->modelo }}</strong>
+                                    {{ $item->tipo_item }}:<strong class="modelo">{{ $item->modelo }}</strong> [{{$item->item_id}}]
                                 </div>
-                                <a href="{{ route('item.edit', $item->id) }}" class="btn btn-primary btn-sm"><i
+                                <a href="{{ route('item.edit', $item->item_id) }}" class="btn btn-primary btn-sm"><i
                                         class="fas fa-edit fa-fw"></i></a>
 
                             </div>
