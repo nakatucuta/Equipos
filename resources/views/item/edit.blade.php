@@ -73,23 +73,33 @@
                 $('#tipo_item').on('change', function() {
                     let value = $(this).val();
 
-                    if (value == 'CELULAR' || value == 'TABLET') {
+                    if (value == 'CELULAR' || value == 'TELEFONO') {
                         $('#inputsuperoculto').hide();
                         $('#inputsuperoculto1').hide();
                         $('#inputsuperoculto2').hide();
                         $('#inputsuperoculto3').hide();
                         $('#inputsuperoculto5').hide();
+                        $('#inputsuperoculto6').show();                      
+                    } else if (value == 'TABLET') {
+                        $('#inputsuperoculto').hide();
+                        $('#inputsuperoculto1').hide();
+                        $('#inputsuperoculto2').hide();
+                        $('#inputsuperoculto3').hide();
+                        $('#inputsuperoculto5').hide();
+                        $('#inputsuperoculto6').hide();  
                     } else if (value == 'CPU') {
                         $('#inputsuperoculto').show();
                         $('#inputsuperoculto1').show();
                         $('#inputsuperoculto2').show();
                         $('#inputsuperoculto3').show();
+                        $('#inputsuperoculto6').hide();  
                     } else {
                         $('#inputsuperoculto').hide();
                         $('#inputsuperoculto1').hide();
                         $('#inputsuperoculto2').hide();
                         $('#inputsuperoculto3').hide();
                         $('#inputsuperoculto5').hide();
+                        $('#inputsuperoculto6').hide();  
                     }
                 });
 

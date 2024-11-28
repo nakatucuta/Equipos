@@ -57,6 +57,7 @@
                     <p><strong>Nombre de carpeta: </strong>{{ $item->nombre_carpeta }}</p>
                     <p><strong>Correo copia de seguridad: </strong>{{ $item->correo_copiaseg }}</p>
                     <p><strong>Board: </strong>{{ $item->board }}</p>
+                    <p><strong>Numero de telefono: </strong>{{ $item->telefono }}</p>
                 </div>
             </div>
         </div>

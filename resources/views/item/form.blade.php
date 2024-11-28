@@ -221,6 +221,12 @@
                                 value="{{ isset($empleado->procesador) ? $empleado->procesador : old('procesador') }}">
                         </div>
 
+                        <div class="form-group" id="inputsuperoculto6">
+                            <label for="activo">Numero telefono</label>
+                            <input class="form-control" type="text" name="telefono" id="telefono"
+                                value="{{ isset($empleado->telefono) ? $empleado->telefono : old('telefono') }}">
+                        </div>
+
                         <div class="form-group">
                             <label for="precio">Precio </label>
                             <div class="input-group">

@@ -151,7 +151,7 @@ class AssignmentsController extends Controller
             ->select('assignments.id', 'c.id as item_id','b.nombres', 'b.cargo', 'c.tipo_item', 'c.service_tag', 'c.foto', 'c.marca', 'c.modelo'
                 , 'c.nombre_aw', 'c.ip', 'c.mac', 'c.activo', 'c.sistema_operativo', 'c.procesador', 'c.capacidad_ram',
                 'c.capacidad_discoduro','c.nombre_carpeta','c.correo_copiaseg','c.oficce','c.tipo','c.correo_ofice',
-                'c.fecha_compra','c.fecha_mantenimiento',
+                'c.fecha_compra','c.fecha_mantenimiento','c.telefono'
             )
             ->where('assignments.people_id', $id)
             ->orderByRaw("

@@ -13,9 +13,9 @@
             <div class="card">
                 <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
                     <span><i class="fas fa-address-card me-2"></i>Información del Funcionario</span>
-                    <span class="ms-auto text-end" style="margin-left: auto">[{{$people->id}}]</span>
+                    <span class="ms-auto text-end" style="margin-left: auto">[{{ $people->id }}]</span>
                 </div>
-               
+
                 <div class="card-body">
                     <ul class="list-unstyled">
                         <li>
@@ -70,7 +70,8 @@
                                         <i class="fas fa-tag me-2"></i>
                                     @endif
 
-                                    {{ $item->tipo_item }}:<strong class="modelo">{{ $item->modelo }}</strong> [{{$item->item_id}}]
+                                    {{ $item->tipo_item }}:<strong class="modelo">{{ $item->modelo }}</strong>
+                                    [{{ $item->item_id }}]
                                 </div>
                                 <a href="{{ route('item.edit', $item->item_id) }}" class="btn btn-primary btn-sm"><i
                                         class="fas fa-edit fa-fw"></i></a>
@@ -143,6 +144,31 @@
                                             <div class="list-group-item">
                                                 <label><strong>Ultimo mantenimiento:</strong></label>
                                                 <span>{{ $item->fecha_mantenimiento }}</span>
+                                            </div>
+                                        </div>
+                                    @elseif ($item->tipo_item == 'TELEFONO' || $item->tipo_item == 'CELULAR')
+                                        <div class="col-md-4">
+                                            <div class="list-group-item">
+                                                <label><strong>Activo:</strong></label>
+                                                <span>{{ $item->activo }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="list-group-item">
+                                                <label><strong>Marca:</strong></label>
+                                                <span>{{ $item->marca }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="list-group-item">
+                                                <label><strong>Numero de telefono:</strong></label>
+                                                <span>{{ $item->telefono }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="list-group-item">
+                                                <label><strong>Service-tag:</strong></label>
+                                                <span>{{ $item->service_tag }}</span>
                                             </div>
                                         </div>
                                     @else

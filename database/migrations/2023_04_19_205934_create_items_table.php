@@ -62,6 +62,9 @@ return new class extends Migration
             // LOS NUEVOS
             // $table->string('board')->nullable();
             $table->string('foto')->nullable();
+
+            //campo para guardar el telefono
+            $table->string('telefono')->nullable();
           
             //PARA LA CANTIDAD
             $table->integer('cantidad')->nullable();
