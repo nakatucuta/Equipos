@@ -1,0 +1,16 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Redirigir Equipos a Equipos/public
+    RewriteCond %{REQUEST_URI} ^/Equipos(/.*|$)
+    RewriteRule ^Equipos(/.*|$) /Equipos/public$1 [L,R=301]
+    
+</IfModule>
+
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
