@@ -23,7 +23,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::middleware('auth')->group(function () {
+
+    
 
     Route::resource('item', ItemController::class);
 
@@ -53,8 +57,3 @@ Route::middleware('auth')->group(function () {
 
 });
 
-//Evita que usuarios autenticados vielvan al login
-Route::middleware('guest')->group(function () {
-    Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-    Route::post('/login', [LoginController::class, 'login']);
-});
