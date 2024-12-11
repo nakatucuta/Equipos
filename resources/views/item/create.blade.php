@@ -139,9 +139,9 @@
                         $('#inputsuperoculto1').hide();
                         $('#inputsuperoculto2').hide();
                         $('#inputsuperoculto3').hide();
-                        $('#inputsuperoculto5').hide();git 
+                        $('#inputsuperoculto5').hide();
                         $('#inputsuperoculto6').hide();
-                    }else if (value == 'CPU') {                      
+                    }else if (value == 'CPU' || value == 'PORTATIL') {                      
                         $('#inputsuperoculto').show();
                         $('#inputsuperoculto1').show();
                         $('#inputsuperoculto2').show();
