@@ -34,6 +34,7 @@ class AssignmentsController extends Controller
         $persona = person::select('*')->get();
         $item = DB::table('items')
         ->leftJoin('users', 'items.user_id', '=', 'users.id')
+        ->where('items.estado', 1) // Filtrar por estado igual a 1
         ->whereNotExists(function ($query) {
             $query->select(DB::raw(1))
                 ->from('assignments')
