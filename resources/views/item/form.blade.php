@@ -240,6 +240,13 @@
                         </div>
 
 
+                        <div class="form-group" id="inputsuperoculto5">
+                            <label for="activo">Municipio Ubicacion</label>
+                            <input class="form-control" type="text" name="Municipio_ubicacion" id="Municipio_ubicacion"
+                                value="{{ isset($empleado->Municipio_ubicacion) ? $empleado->Municipio_ubicacion : old('Municipio_ubicacion') }}">
+                        </div>
+
+
                     </div>
                 </div>
                 {{-- aqui termina la primera seccion --}}
