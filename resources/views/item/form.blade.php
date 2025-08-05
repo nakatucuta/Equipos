@@ -197,6 +197,9 @@
                                     <option value="Yuansheng"
                                     {{ isset($empleado->marca) && $empleado->marca == 'HONOR' ? 'selected' : '' }}>
                                     HONOR</option>
+                                     <option value="Yuansheng"
+                                    {{ isset($empleado->marca) && $empleado->marca == 'ZEBRA' ? 'selected' : '' }}>
+                                    ZEBRA</option>
 
                             </select>
                         </div>
